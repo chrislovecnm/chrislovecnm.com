@@ -1,6 +1,6 @@
 # Site settings
-title: Monochrome | A minimal, responsive Jekyll blog theme
-description: "A minimal, responsive, ready to use blog template, built with Jekyll."
+title: Kubernetes musings by chrislovecnm
+description: "Kubernetes musings by Chris Love - aka chrislovecnm"
 url: "https://k8spro.com"
 author:
   name: "Chris Love"
@@ -8,7 +8,7 @@ author:
   url: "https://k8spro.com"
 
 # Build settings
-baseurl: /
+baseurl: 
 markdown: kramdown
 source: .
 destination: ./_site
@@ -39,3 +39,6 @@ custom_nav_footer: false
 reverse: false
 
 exclude: [vendor]
+
+twitter_username:     chrislovecnm
+github_username:      chrislovecnm

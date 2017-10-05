@@ -1,26 +1,17 @@
 ---
 layout: page
-title: Chris Love Resume
-description: My Resume
+title: Resume
+description: Chris Love Resume
 ---
 
-<div>
+# Chris Love Resume
 
-<span class="c16 c39"></span>
+<span class="c10 c3 c23">Email:</span> <span class="c3 c23 c28">[clove@cnmconsulting.net](mailto:clove@cnmconsulting.net)</span><span class="c10 c3 c23">   Github: [chrislovecnm](https://github.com/chrislovecnm)</span>
 
-</div>
+## Cloud DevOps Architect and Engineer
 
-<span class="c31 c3 c38">Chris Love</span>
 
-<span class="c10 c3 c23">Email:</span> <span class="c3 c23 c28">[clove@cnmconsulting.net](mailto:clove@cnmconsulting.net)</span><span class="c10 c3 c23">  Phone: (303) 929-8509 Github: chrislovecnm</span>
-
-<span class="c20 c3 c23"></span>
-
-<span class="c3 c29">Cloud DevOps Architect and Engineer</span>
-
-<span class="c8 c1"></span>
-
-<span class="c8 c1">More than</span> <span class="c1">seventeen</span><span class="c8 c1"> years of diverse experience creating custom solutions,</span> <span class="c1">Cloud DevOps Implementations</span><span class="c1 c8">,</span> <span class="c1">Big Data,</span> <span class="c1 c15">Virtualization</span><span class="c1">, and scalable</span><span class="c8 c1"> web applications.  Proven ability to solve complex problems with limited resources, on time, and within budget. Retained key clients in high pressure and politically charged situations by identifying and creating unique solutions, thereby maintaining revenue.  </span><span class="c1"> Industry leading blend of cutting edge DevOps Cloud operation, Big Data Technologies, and system integration.</span>
+More than seventeen</span><span class="c8 c1"> years of diverse experience creating custom solutions,</span> <span class="c1">Cloud DevOps Implementations</span><span class="c1 c8">,</span> <span class="c1">Big Data,</span> <span class="c1 c15">Virtualization</span><span class="c1">, and scalable</span><span class="c8 c1"> web applications.  Proven ability to solve complex problems with limited resources, on time, and within budget. Retained key clients in high pressure and politically charged situations by identifying and creating unique solutions, thereby maintaining revenue.  </span><span class="c1"> Industry leading blend of cutting edge DevOps Cloud operation, Big Data Technologies, and system integration.</span>
 
 <span class="c8 c1"></span>
 
@@ -352,7 +343,7 @@ description: My Resume
 
 <span class="c8 c1">After initial project served is part time consultant assisting with various technical and implementation challenges.  Worked hand in hand with SecureAuth (SAML identity company) to create SAML SSO environment to pilot security model for Dish Network and Blockbuster Video. Created POC implementation of a secure J2EE web application hosted in WebLogic with user identities and roles secured via SecureAuth SAML IdP.  Assisted SecureAuth with product improvements in order to enable SecureAuth to act as an IdP for WebLogic.</span>
 
-<span class="c10 c3 c1">  
+<span class="c10 c3 c1">
 </span><span class="c8 c1">Fully documented POC and trained Dish Network staff on SAML, the implementation of secure WebLogic application, and the implementation of security utilizing SecureAuth. Integrated Tomcat with SecureAuth utilizing Spring Security SAML Extension.</span>
 
 <a id="t.1dbdebc22b942d513c0b55d66c59054f4f4173a3"></a><a id="t.6"></a>
@@ -722,4 +713,3 @@ description: My Resume
 <span class="c16 c39"></span>
 
 </div>
-
