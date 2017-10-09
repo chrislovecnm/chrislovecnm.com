@@ -7,16 +7,16 @@ $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
-$table-text-align: left !default;
-$spacing-unit:     30px !default;
+$table-text-align-custom: left !default;
+$spacing-unit-custom:     30px !default;
 
 /**
  * Tables
  */
-table {
-  margin-bottom: $spacing-unit;
+.custom-table {
+  margin-bottom: $spacing-unit-custom;
   width: 100%;
-  text-align: $table-text-align;
+  text-align: $table-text-align-custom;
   color: lighten($text-color, 18%);
   border-collapse: collapse;
   border: 1px solid $grey-color-light;
@@ -26,7 +26,7 @@ table {
     }
   }
   th, td {
-    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    padding: ($spacing-unit-custom / 3) ($spacing-unit-custom / 2);
   }
   th {
     white-space: nowrap;

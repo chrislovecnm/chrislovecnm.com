@@ -25,7 +25,7 @@ interest groups.
 
 ## Skills
 
-<table>
+<table class="custom-table">
   <tr>
     <th>Cloud Stacks</th>
     <td>Amazon Web Services, Google Cloud Platform, vSphere 6.x</td>

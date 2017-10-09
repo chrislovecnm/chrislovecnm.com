@@ -69,13 +69,13 @@ To make an application more resilient application tasks may need to be completed
 Including the following example, `PreStop` to JVM based containers is often helpful.  This example lives within the contain section of a Kubernetes manifest.
 
 {% highlight yaml linenos %}
-          lifecycle:
-            preStop:
-              exec:
-                command:
-                  - /bin/bash
-                  - -c
-                  - PID=`pidof java` && kill -SIGTERM $PID && while ps -p $PID > /dev/null; do sleep 1; done;
+lifecycle:
+  preStop:
+    exec:
+      command:
+        - /bin/bash
+          - -c
+            - PID=`pidof java` && kill -SIGTERM $PID && while ps -p $PID > /dev/null; do sleep 1; done;
 {% endhighlight %}
 
 Other applications such as Nginx will stop when they receive an `SIGTERM` signal.  To gracefully stop Nginx use the following `preStop` hook.
