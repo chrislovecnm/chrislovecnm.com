@@ -1,11 +1,11 @@
 # Site settings
 title: Kubernetes musings by chrislovecnm
 description: "Kubernetes musings by Chris Love - aka chrislovecnm"
-url: "https://k8spro.com"
+url: "https://chrislovecnm.com"
 author:
   name: "Chris Love"
   email: "blog@cnmconsulting.net"
-  url: "https://k8spro.com"
+  url: "https://chrislovecnm.com"
 
 # Build settings
 baseurl:
