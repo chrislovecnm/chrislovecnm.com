@@ -33,7 +33,7 @@ Three different implementations of probes exist:
 2. `ExecAction`: Executes a command inside the container, and expects an `exit(0)` for success.
 3. `TCPSocketAction`: Creates a socket connection on a specified port, and succeeds if the socket connects.
 
-Each of the probes has one of three results; Success, Failure and Unknown.  More details on probes are found in the Kubernetes [documentation][5].
+Each of the probes has one of three results; Success, Failure and Unknown.  More details on probes are found in the Kubernetes [documentation](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/).
 
 #### When to use or not use probes
 
@@ -179,17 +179,3 @@ the selectors has moved into the `PodSpec`.
 As previously mentioned the scheduler, without specific filters, spreads pods across
 nodes.  When specific selectors are added to the scheduler filters, the filtersdo impact the speed of a deployment of a pod.  Exact numbers on the impact of scaling are not available at this time, but this impact is a known issue.  The recommendation is to use the selector only
 when needed, and most often with applications that have state and maintain data persistence.
-
-[1]: [https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/]
-[2]: [https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/]
-[3]: [https://github.com/Yelp/dumb-init]
-[4]: [https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html]
-[5]: [https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/]
-[6]: [https://kubernetes.io/docs/concepts/workloads/controllers/deployment/]
-[7]: [https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/]
-[8]: [https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/]
-[9]: [https://kubernetes.io/docs/concepts/jobs/run-to-completion-finite-workloads/]
-[10]: [https://kubernetes.io/docs/concepts/workloads/pods/pod/]
-[11]: [https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/]
-[12]: [https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/]
-[13]: [https://kubernetes.io/docs/concepts/storage/persistent-volumes/]
