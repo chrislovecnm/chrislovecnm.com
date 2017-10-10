@@ -23,14 +23,14 @@ application hosted in Kubernetes.
 - Use Pre or Post stop hooks if your binary needs more TLC to start or stop gracefully.
 
 ### Covered in Part Two
-- Use [Deployment](#deployments) Controller Manifests for Microservice, and use [StatefulSets](#StatefulSets) only if you need there features.
-- [Jobs](#jobs) and [DaemonSets](#daemonsets) do not provide out of the box HA, but fill some use cases.
-- [Persistent Volumes](#persistent-volumes) are the way to save a make data persitent.
+- Use [Deployment]({% post_url 2017-10-07-highly-available-resilient-applications-in-kubernetes-2-of-3 %}#deployments) Controller Manifests for Microservice, and use [StatefulSets]({% post_url 2017-10-07-highly-available-resilient-applications-in-kubernetes-2-of-3 %}#StatefulSets) only if you need there features.
+- [Jobs]({% post_url 2017-10-07-highly-available-resilient-applications-in-kubernetes-2-of-3 %}#jobs) and [DaemonSets]({% post_url 2017-10-07-highly-available-resilient-applications-in-kubernetes-2-of-3 %}#daemonsets) do not provide out of the box HA, but fill some use cases.
+- [Persistent Volumes]({% post_url 2017-10-07-highly-available-resilient-applications-in-kubernetes-2-of-3 %}#persistent-volumes) are the way to save a make data persitent.
 
 ### Covered in Part Three
-- Use Liveness and Ready [Probes](#probes). Design your application to use and support
+- Use Liveness and Ready [Probes]({% post_url 2017-10-07-highly-available-resilient-applications-in-kubernetes-3-of-3 %}#probes). Design your application to use and support
 them.
-- Use [Affinity and Anti-Affinity Selectors](#affinity-and-anti-affinity-selectors) if pods need
+- Use [Affinity and Anti-Affinity Selectors]({% post_url 2017-10-07-highly-available-resilient-applications-in-kubernetes-3-of-3 %}#affinity-and-anti-affinity-selectors) if pods need
 to be ditributed across nodes.
 
 ## Application Lifecycle Within Kubernetes
