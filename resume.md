@@ -62,7 +62,7 @@ interest groups.
 
 ## Experience
 ### Kubernetes Organization
-<time class="by-line">04/2016 – Present</time>
+<span class="by-line">04/2016 – Present</span>
 
 Kubernetes contributor and active community member.  Focus is primarily in three
 areas; kops, the AWS special interest group, and mentoring.
@@ -85,7 +85,7 @@ fixing impact to AWS API calls.
 Assisting with the creation of an official Kubernetes Mentorship program.
 
 ### Vorstella
-<time class="by-line">06/2017  – 10/2017</time>
+<span class="by-line">06/2017  – 10/2017</span>
 
 Assist in deploying Kubernetes into air-gapped enterprise environments with kops
 self-hosted assets.  Implemented capability to re-use security groups, iam
@@ -97,7 +97,7 @@ K8s clusters. Mentored developers in K8s design and custom application
 implementation.
 
 ### Datapipe
-<time class="by-line">05/2016  – 05/2017</time>
+<span class="by-line">05/2016  – 05/2017</span>
 
 Lead architecture and deployment of Kuberentes deployment for trebuchet SAS
 platform hosted in AWS. Architecture included CNI networking, installation tool
@@ -107,7 +107,7 @@ microservices and stateful applications.  Assisted with maintaining 5/9's
 availability of Kubernetes environments.
 
 ### Cisco
-<time class="by-line">10/2015  – 12/2015</time>
+<span class="by-line">10/2015  – 12/2015</span>
 
 Contributed to Cisco Cloud open source project named Mantl.  Mantl is a platform
 for rapidly deploying globally distributed services.  Mantl platform utilizes
@@ -123,7 +123,7 @@ Mesos or Kubernetes, which contrasted pros and cons.  Completed assessment and
 diagnosis of Cassandra challenges.
 
 ### CenturyLink Technology Solutions - Formerly Savvis
-<time class="by-line">11/2013  – 09/2015</time>
+<span class="by-line">11/2013  – 09/2015</span>
 
 Held multiple Software and DevOps roles within the company.  Projects varied
 from acting as a subject matter expert for VMware Cloud API, to interacting with
@@ -144,7 +144,7 @@ DevOps teams with various puppet improvements.
 
 
 ### Smile Brands
-<time class="by-line">08/2012 – 01/2013</time>
+<span class="by-line">08/2012 – 01/2013</span>
 
 Lead initiative to process dental insurance claims via integration with various
 partners.  Utilizing Apache Camel and web services to process and submit claims
@@ -155,7 +155,7 @@ using various Spring 3.2 components including REST, MVC, AOP, and dependency
 injection.
 
 ### Dish Network
-<time class="by-line">06/2011 – 12/2011</time>
+<span class="by-line">06/2011 – 12/2011</span>
 
 After initial project served is part-time consultant assisting with various
 technical and implementation challenges.  Worked hand in hand with SecureAuth
@@ -171,7 +171,7 @@ SecureAuth. Integrated Tomcat with SecureAuth using Spring Security SAML
 Extension.
 
 ### AT&amp;T - Spring / vFrabric Consultant
-<time class="by-line">08/2011 – 7/2012</time>
+<span class="by-line">08/2011 – 7/2012</span>
 
 
 Serving as a Senior Consult, working with AT&amp;T, to integrate VMware Virtual
@@ -194,7 +194,7 @@ staff in Spring, Maven, Unit Testing, and CI best practices and industry
 standards.
 
 ### Progress Software – ADP and Garden City Group
-<time class="by-line">05/2011 – 07/2011</time>
+<span class="by-line">05/2011 – 07/2011</span>
 
 
 ADP – Expanded functionality of previously implemented Spring based web
@@ -213,7 +213,7 @@ installation.  This architecture allows for easier future upgrades.  Worked with
 GCG to create production architecture for SBM 7.8 deployed on RedHat JBoss AS.
 
 ### Accenture – Healthcare Client
-<time class="by-line">07/2010 – 04/2011</time>
+<span class="by-line">07/2010 – 04/2011</span>
 
 
 Contracted as lead architect and portal developer. Brought on to address various
@@ -236,7 +236,7 @@ staff in technologies including Maven, Git, Spring, WLST, Ext JS, and other
 Oracle technologies.
 
 ### ADP
-<time class="by-line">02/2010 – 06/2010</time>
+<span class="by-line">02/2010 – 06/2010</span>
 
 
 Implemented custom web service to provide access to various data points within
@@ -249,7 +249,7 @@ process.  Created JSP front-end to interact with the above services utilizing
 EXT JS libraries and JSON.  Worked with BizLogic and BizSolo process flows.
 
 ### Intuit
-<time class="by-line">03/2009 – 12/2009</time>
+<span class="by-line">03/2009 – 12/2009</span>
 
 
 Re-architected legacy daemon process into a web application utilizing Spring,
@@ -267,7 +267,7 @@ for Intuit’s build system.  Built system utilizes Hudson and Perforce.  Migrat
 Savvion 6.0 projects to Savvion 7.0.
 
 ### Camico
-<time class="by-line">08/2007 – 02/2009</time>
+<span class="by-line">08/2007 – 02/2009</span>
 
 
 Led a team creating web-based insurance applications that allows clients to
@@ -286,7 +286,7 @@ practices were instrumental in reducing overall time to market by approximately
 service interoperability, and general software delivery practices.
 
 ### Warner Bros.
-<time class="by-line">03/2007 – 05/2007</time>
+<span class="by-line">03/2007 – 05/2007</span>
 
 
 Brought on to the Digital End-to-End (DETE) program to provide: architecture
@@ -305,7 +305,7 @@ Delivered Spring aware service layer framework that allowed various software
 components to access ALBPM via its Process API (PAPI).
 
 ### Option One Mortgage
-<time class="by-line">02/2007 – 03/2007</time>
+<span class="by-line">02/2007 – 03/2007</span>
 
 
 Developed a paperless mortgage AquaLogic BPM application.  Implemented WebLogic
@@ -315,7 +315,7 @@ with the client performance tuning WebLogic and ALBPM Engine running on a VMWare
 virtual server.
 
 ### Micron Technologies
-<time class="by-line">07/2006 – 01/2007</time>
+<span class="by-line">07/2006 – 01/2007</span>
 
 
 Led the implementation of a Savvion BusinessManager 6.8, on BEA WebLogic 8.1
@@ -334,7 +334,7 @@ Subversion.
 ## Military Experience
 
 ### United States Air Force and DOD
-<time class="by-line">06/2005 – 08/2005</time>
+<span class="by-line">06/2005 – 08/2005</span>
 
 
 Honorably discharged, in 1994, from United States Air Force with the rank of
