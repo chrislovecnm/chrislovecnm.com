@@ -2,6 +2,7 @@
 layout: page
 title: About Chris Love
 description: This is a little about me
+permalink: /about/
 ---
 
 ## About Me

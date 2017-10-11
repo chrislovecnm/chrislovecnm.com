@@ -2,6 +2,7 @@
 layout: page
 title: Resume
 description: chrislovecnm resume
+permalink: /resume/
 ---
 
 # Chris Love

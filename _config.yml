@@ -8,11 +8,11 @@ author:
   url: "https://chrislovecnm.com"
 
 # Build settings
-baseurl:
+# baseurl: /
 markdown: kramdown
 source: .
 destination: ./_site
-permalink: /:title
+permalink: /:categories/:title/
 paginate: 8
 paginate_path: /page:num/
 
