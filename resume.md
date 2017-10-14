@@ -9,7 +9,7 @@ permalink: /resume/
 
 <address>
 Email Adddress<br>
-<a href="mailto:clove+resume@cnmconsulting.net">clove+resume@cnmconsulting.net</a>
+<a href="mailto:jobs@cnmconsulting.net">jobs@cnmconsulting.net</a>
 </address>
 
 ## Cloud Kubernetes DevOps Architect and Engineer

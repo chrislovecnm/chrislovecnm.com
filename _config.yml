@@ -38,7 +38,7 @@ custom_header: false
 custom_nav_footer: false
 reverse: false
 
-exclude: [vendor]
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'vendor', 'Rakefile']
 
 twitter_username:     chrislovecnm
 github_username:      chrislovecnm
