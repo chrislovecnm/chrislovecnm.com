@@ -15,12 +15,12 @@ site for now.
 
 1. [Jekyll](https://jekyllrb.com/) for blog generation
 1. Jekyll theme
-1. github for source control
-1. travis for CI
+1. GitHub for source control
+1. Travis for CI
 1. html-proofer for checking links
-1. atom or vi for editting
-1. google analytics for tracking
-1. grammarly to help with my spelling
+1. atom or vi for editing
+1. Google analytics for tracking
+1. Grammarly to help with my spelling
 
 ## Jekyll
 
@@ -28,8 +28,8 @@ From [here](https://jekyllrb.com/):
 
 > Transform your plain text into static websites and blogs.
 
-It is called simple on there site, but there is a learning curve.  If you are a
-gear head developer that like CLI, the Jekyll is amazing.  If you are a
+It is called simple on their site, but there is a learning curve.  If you are a
+gearhead developer that like CLI, the Jekyll is amazing.  If you are a
 marketing department, use Wordpress.
 
 The `_config.yml` configures Jekyll, and some tweaks that took a bit to figure
@@ -49,23 +49,23 @@ Here is a link to my current
 ## Jekyll Theme
 
 [jekyllthemes.org](http://jekyllthemes.org/) has a ton of free themes. My wife
-did not like the colors for a solarized theme, but did like
-[monochrome](https://github.com/dyutibarma/monochrome).  Really clean simple
-theme. I have some issues with css for code line numbers which I am not able to
-work out yet, and I made some tweaks for tables.
+did not like the colors for a solarized theme but did like
+[monochrome](https://github.com/dyutibarma/monochrome).  Clean, simple layout. I
+have some issues with CSS for code line numbers which I am not able to work out
+yet, and I made some tweaks for tables.
 
 ## Github
 
-I really do not have to write much about this. But using source control is kinda
-a way of life for me.  Using source control with Jekyll is trivial.
+I do not have to write much about this. But using source control is a way of
+life for me.  Using source control with Jekyll is trivial.
 
 ## Travis for CI
 
-Travis, CircleCI, and Jenkins are probably the main tools in the ecosystem.
-Travis is used by kops, and a lot of the other projects I use.  Hence why I
-chose Travis. I started wit the instructions
+Travis, CircleCI, and Jenkins are probably the chief tools in the ecosystem.
+kops, and a lot of the other projects I am a part of run Travis.  Hence why I
+chose Travis. I started with the instructions
 [here](http://jekyllrb.com/docs/continuous-integration/travis-ci/), but I
-modifed my .travis.yml file.
+modified my .travis.yml file.
 
 {% highlight yaml %}
 language: ruby
@@ -83,24 +83,25 @@ env:
 sudo: false
 {% endhighlight %}
 
-I do not have automatic deployment of my blog yet.  Travis can push the blog to
-an object store, but I have not worked it out fully yet.
+I do not have the automatic deployment of my blog yet.  Travis can push the blog
+to an object store, but I have not worked it out fully yet.
 
 # html-proofer
 
-This html tool is super nice!  Check your links, and HTML validation.  A
-spelling and grammar tool would be nice.
+This HTML tool is super nice!  Check your links, and HTML validation.  A
+spelling and grammar tool would be awesome.
 
 You can run it locally.  I got a weird error that the binary was missing when I
-tried to run it locally.  Besides why would I not use a container to run it?
+tried to run it locally.  Besides, why would I not use a container to run it?
 
 {% highlight bash %}
-docker run -v `pwd`/_site/:/_site 18fgsa/html-proofer /_site --assume-extension --check-html
+docker run -v `pwd`/_site/:/_site 18fgsa/html-proofer /_site \
+ --assume-extension --check-html
 {% endhighlight %}
 
 ## Editor
 
-Not going to elaborate, but with Jekyll you are editting markdown and yaml
+Not going to elaborate, but with Jekyll, you are editing markdown and YAML
 files.  Pick your favorite editor and rock it!  My choice is vi or atom.
 
 ## Google Analytics
@@ -113,10 +114,10 @@ used GA for years.
 [Grammarly]{https://app.grammarly.com/) helps me a TON. I am good at writing,
 but spelling and past tense are enemies!  Grammarly is free for spelling and
 other checks, but checking for "past tense" requires a subscription.  I would
-really like to figure out how to integrate Grammarly with atom or vi.  Just
-googled online, and NADA.
+like to figure out how to integrate Grammarly with atom or vi.  Just googled
+online, and NADA.
 
 ## Next Steps
 
 (chrislovecnm.com)[https://chrislovecnm.com] needed an internet home.  I will
-cover that in another post!
+cover that in another post.
