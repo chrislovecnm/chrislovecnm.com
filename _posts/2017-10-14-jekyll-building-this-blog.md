@@ -6,9 +6,9 @@ date:   2017-10-14 14:52:14 MDT
 categories: jekyll building blog
 ---
 
-I have used [Jekyll](https://jekyllrb.com/) a little in the past, and I decided
-to start blogging again, Jekyll was my obvious choice.  Wordpress would be my
-other choice, but that requires a web server.  I would rather just have a static
+[Jekyll](https://jekyllrb.com/) has crossed my path in the past, and I decided
+to start blogging again. Jekyll was my obvious choice.  Wordpress would be my
+other option, but that requires a web server.  I would rather just have a static
 site for now.
 
 ## Tools I am Using
@@ -56,7 +56,7 @@ yet, and I made some tweaks for tables.
 
 ## Github
 
-I do not have to write much about this. But using source control is a way of
+Do I have to write much about this? But using source control is a way of
 life for me.  Using source control with Jekyll is trivial.
 
 ## Travis for CI
@@ -119,5 +119,5 @@ online, and NADA.
 
 ## Next Steps
 
-(chrislovecnm.com)[https://chrislovecnm.com] needed an internet home.  I will
+[chrislovecnm.com](https://chrislovecnm.com) needed an internet home.  I will
 cover that in another post.
