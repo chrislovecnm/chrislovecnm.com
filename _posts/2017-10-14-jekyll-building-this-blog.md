@@ -111,7 +111,7 @@ used GA for years.
 
 ## Grammarly
 
-[Grammarly]{https://app.grammarly.com/) helps me a TON. I am good at writing,
+[Grammarly](https://app.grammarly.com/) helps me a TON. I am good at writing,
 but spelling and past tense are enemies!  Grammarly is free for spelling and
 other checks, but checking for "past tense" requires a subscription.  I would
 like to figure out how to integrate Grammarly with atom or vi.  Just googled
