@@ -1,5 +1,5 @@
 ---
-title: Google Cloud Hosting
+title: Setting Up Google Cloud To Serve This Blog
 description: How I am hosting this blog in Google Cloud
 header: Setting Up Google Cloud To Serve This Blog
 date:   2017-10-14 16:52:54 MDT

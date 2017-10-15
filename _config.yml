@@ -3,7 +3,7 @@ title: Kubernetes musings by chrislovecnm
 description: "Kubernetes musings by Chris Love - aka chrislovecnm"
 url: "https://chrislovecnm.com"
 author:
-  name: "Chris Love"
+  name: "Chris Love - chrislovecnm"
   email: "blog@cnmconsulting.net"
   url: "https://chrislovecnm.com"
 
@@ -29,6 +29,7 @@ defaults:
 gems:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Custom variables
 version: "1.0.0"
