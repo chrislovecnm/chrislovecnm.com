@@ -1,5 +1,17 @@
+---
+title: DevOps for Kuberentes Operation
+description: kops - Kuberentes Operation is DevOps for Kuberentes clusters.
+header: kops DevOps for Kuberetes
+date:   2017-10-15 18:50:06 MDT
+categories: kubernetes kops
+tags:
+  - kubernetes
+  - kops
+  - DevOps
+---
+
 [kops](https://github.com/kubernetes/kops) is an Open Source top level
-Kubernetes project.  kops is an abbreviation for Kuberentes Operations. From
+Kubernetes project.  kops is an abbreviation for Kubernetes Operations. From
 the README in the project:
 
 > kops helps you create, destroy, upgrade and maintain production-grade, highly
@@ -13,7 +25,7 @@ found us.  [Mike Danese](https://github.com/mikedanese), [Zach
 Loafman](https://github.com/zmerlynn), Justin, and many other people from the
 Kubernetes team contributed to the initial creation of kops.
 
-## kops is DevOps for Kubernetes
+## kops is DevOps
 
 [Wikipedia's](https://en.wikipedia.org/wiki/DevOps) DevOps Definition
 
@@ -29,7 +41,7 @@ Repeatable, tested automation is the core of the philosophy of DevOps.  Through
 code the kops' team does the hard things to make it easy for the kops users.
 
 kops is tested, tested and tested again.  Every time a PR is pushed in the main
-Kuberentes repository, kops builds a cluster in AWS.  The end to end kubernetes
+Kubernetes repository, kops builds a cluster in AWS.  The end to end Kubernetes
 tests are then run on that cluster.  The kops team is working on getting GCE e2e
 tests up and running soon.
 
@@ -58,11 +70,12 @@ well to help build the manifests.
 - Command line autocompletion
 - Manifest Based API Configuration
 - Rolling updates and upgrades that are on par with commercial products
-- Validate that Kubernetes is up and running
+- Validate that a cluster is up and running
 - Exporting kubeconfig for installed clusters
 - CLI options for edit, create, delete, update, upgrade, rolling-update,
   validate, and more
 - Full support for RBAC
+- And many many more
 
 ## Tutorials
 
