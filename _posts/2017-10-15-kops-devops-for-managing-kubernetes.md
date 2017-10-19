@@ -1,7 +1,7 @@
 ---
-title: DevOps for Kuberentes Operation
-description: kops - Kuberentes Operation is DevOps for Kuberentes clusters.
-header: kops DevOps for Kuberetes
+title: DevOps for Kubernetes Operation
+description: kops - Kubernetes Operation is DevOps for Kubernetes clusters.
+header: kops DevOps for Kubernetes
 date:   2017-10-15 18:50:06 MDT
 categories: kubernetes kops
 tags:
