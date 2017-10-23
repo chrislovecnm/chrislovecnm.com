@@ -8,6 +8,7 @@ tags:
   - bazel
   - golang
   - go
+image: /img/bazel-icon.svg
 ---
 
 > Warning: only use if you have a severe need for speed and want to be more
@@ -25,20 +26,23 @@ are sub-second which took 6 min.  Those numbers are no joke.
 See this [link](https://blog.bazel.build/2017/07/05/new-logo-and-homepage.html)
 for information on their logo.
 
+On February 25th, 2015, a Googler pushed the first commit to the bazel project,
+and Google officially Open Sourced the project.  Blaze is Google's closed source
+build tool and is the predecessor to bazel.
+
 ## Why Bazel
 
 1. Speed, speed and more speed, Ferrari like performance. Because of caching,
 compilation and unit test speed is ridiculous.
 1. One tool to rule them all. Bazel supports Go, Java, C++, Android, iOS, on
- macOS Linux, Windows.
-1. Extensibility - Add plugins and call external tools.
-1. The component scales. It handles codebases of any size and integrates into CI.
+ OSX, Linux, and Windows.
+1. Extensibility. Add plugins and call external tools.
+1. The tool scales. It handles codebases of any size and integrates into CI.
+  The kubernetes/kubernetes repository is a huge repo with multiple containers
+  and binaries.
 1. Build vendoring for go.  We where not able to fully use it in kops, because
  of some challenges, but for other projects it works great. Watch out dep, cause
  you have a serious competitor.
-
-Blaze is Google's closed source build tool and is the predecessor to bazel.  So
-I know that the above claims are valid.
 
 ## Using Bazel with Go
 

@@ -46,3 +46,11 @@ exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'vendor', 'Rakefile']
 
 twitter_username:     chrislovecnm
 github_username:      chrislovecnm
+twitter:
+  username: chrislovecnm
+social:
+  name: Chris Love
+  links:
+    - https://twitter.com/chrislovecnm
+    - https://github.com/chrislovecnm
+    - https://www.linkedin.com/in/chrislovecnm
