@@ -6,6 +6,8 @@ author:
   name: "Chris Love - chrislovecnm"
   email: "blog@cnmconsulting.net"
   url: "https://chrislovecnm.com"
+  twitter: chrislovecnm
+  picture: /img/chrislove-headshot-small.jpg
 
 # Build settings
 # baseurl: /
@@ -56,9 +58,6 @@ social:
     - https://github.com/chrislovecnm
     - https://www.linkedin.com/in/chrislovecnm
 
-author:
-  twitter: chrislovecnm
-  picture: /img/chrislove-headshot-small.jpg
 
 webmaster_verifications:
   bing: 9258515978EDC87C326D261B85A63F07
