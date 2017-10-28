@@ -48,12 +48,17 @@ twitter_username:     chrislovecnm
 github_username:      chrislovecnm
 twitter:
   username: chrislovecnm
+
 social:
   name: Chris Love
   links:
     - https://twitter.com/chrislovecnm
     - https://github.com/chrislovecnm
     - https://www.linkedin.com/in/chrislovecnm
+
+author:
+  twitter: chrislovecnm
+  picture: /img/chrislove-headshot-small.jpg
 
 webmaster_verifications:
   bing: 9258515978EDC87C326D261B85A63F07

@@ -9,6 +9,8 @@ tags:
   - golang
   - go
 image: /img/bazel-icon.svg
+author:
+  twitter: chrislovecnm
 ---
 
 > Warning: only use if you have a severe need for speed and want to be more
@@ -26,9 +28,17 @@ are sub-second which took 6 min.  Those numbers are no joke.
 See this [link](https://blog.bazel.build/2017/07/05/new-logo-and-homepage.html)
 for information on their logo.
 
+## What is Bazel
+
 On February 25th, 2015, a Googler pushed the first commit to the bazel project,
 and Google officially Open Sourced the project.  Blaze is Google's closed source
 build tool and is the predecessor to bazel.
+
+Bazel is a build tool that replaces using Makefiles or other tools for building
+go.  Under the hood, it uses `go build`.  But it is not your average build tool,
+just as `make` has many different options, bazel provides many exciting features
+including dependency management, and templating with external tools, and the
+capability to build containers without docker.
 
 ## Why Bazel
 
@@ -49,13 +59,15 @@ compilation and unit test speed is ridiculous.
 ### Pre-flight Checks
 
 1. Install bazel - Instructions are [here](https://docs.bazel.build/versions/master/install.html).
-2. It is my understanding that you do not even need to install golang, but it is helpful otherwise. [Here](https://golang.org/doc/install) are install
+2. It is my understanding that you do not even need to install golang, but it is
+ helpful otherwise. [Here](https://golang.org/doc/install) are install
  instructions for golang.
 
 ### Helper Script
 
 Create your project with your source control tool of choice.  Inside your
-project run the bash script provided [here](https://github.com/chrislovecnm/go-bazel-hello-world/blob/master/hack/create-bazel-workspace.sh).
+project run the bash script provided
+[here](https://github.com/chrislovecnm/go-bazel-hello-world/blob/master/hack/create-bazel-workspace.sh).
 
 Provide the go path for the project.  For example: `create-bazel-workspace
 github.com/myuser/myproject`
@@ -89,7 +101,8 @@ areas that needs some automation, and hopefully be addressed with work on this
 
 The next set of files are called BUILD or BUILD.bazel.
 
-From bazel [documentation](https://docs.bazel.build/versions/master/build-ref.html#BUILD_files):
+From bazel
+[documentation](https://docs.bazel.build/versions/master/build-ref.html#BUILD_files):
 
 > By definition, every package contains a BUILD file, which is a short program
 written in the Build Language. Most BUILD files appear to be little more than a
@@ -113,7 +126,8 @@ This command will execute `gazelle` because the gazelle rule is defined in the
 above BUILD file.  Running gazelle will create various BUILD.bazel files in your
 project.
 
-More documentation about [Gazelle](https://github.com/bazelbuild/rules_go/blob/master/go/tools/gazelle/README.rst).
+More documentation about
+[Gazelle](https://github.com/bazelbuild/rules_go/blob/master/go/tools/gazelle/README.rst).
 
 ### Defining Your Binary File(s)
 
@@ -164,5 +178,8 @@ Frankly you may as well use `go build`.
 First off thanks to the bazel team, for such an amazing tool. Thanks to
 @justinsb for his [kopeio/build](https://github.com/kopeio/build) project.  I
 was able to work through issues for my example, using the project as a base.
+
 @ixby, @bentheelder, and others help on the #bazel Kubernetes slack channel have
 been invaluable.
+
+Thanks to @jroberts235 for recommending including a basic overview of bazel.

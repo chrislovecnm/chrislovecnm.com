@@ -8,11 +8,12 @@ permalink: /resume/
 # Chris Love
 
 <address>
-Email Adddress<br>
-<a href="mailto:jobs@cnmconsulting.net">jobs@cnmconsulting.net</a>
+Email Address: <a href="mailto:jobs+blog@cnmconsulting.net">jobs+blog@cnmconsulting.net</a><br>
+GitHub URL: <a href="https://github.com/{{ site.twitter_username }}"><i class="fa fa-github"></i></a><br>
+Linkedin URL: <a href="https://www.linkedin.com/in/{{ site.twitter_username }}"><i class="fa fa-linkedin"></i></a>
 </address>
 
-## Cloud Kubernetes DevOps Architect and Engineer
+## Kubernetes DevOps Architect and Engineer
 
 More than eighteen years of diverse experience creating custom solutions;
 Kubernetes Implementations, DevOps solutions, Big Data Implementations, and
@@ -90,7 +91,7 @@ Assisting with the creation of an official Kubernetes Mentorship program.
 
 Assist in deploying Kubernetes into air-gapped enterprise environments with kops
 self-hosted assets.  Implemented capability to re-use security groups, iam
-profiles, in order to pass security review and PEM testing.  Utilized heml
+profiles, in order to pass security review and PEM testing.  Utilized helm
 charts to deploy Cassandra and Datastax enterprise.  Designed and implemented
 Cassandra containers and stateful sets based on contributed Kuberentes Cassandra
 examples. Implemented POC using weave to create a mesh pod network between two
