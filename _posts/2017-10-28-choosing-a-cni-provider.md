@@ -17,11 +17,9 @@ There  are a number of different providers, which have various different
 features and options. Deciding which provider to use is not trivial.
 
 I am not going to say in this blog post: "Use this provider."  There is not one
-provider that meets everyones needs, and there are many different options.
-
-The focus of this post is to not tell you which provider to use.  The goal of
-this blog article is to educate and provide data so that you can make a
-decision.
+provider that meets everyones needs, and there are many different options. The
+focus of this post is to not tell you which provider to use.  The goal of this
+blog article is to educate and provide data so that you can make a decision.
 
 ## Why use CNI
 
@@ -147,15 +145,34 @@ past few months.
 ## By the numbers
 
 kops does not track usage numbers of the different CNI providers, and I hope
-never does.  When doing product selection, one of the consideration I use is the
-number of stars a project has on GitHub.  The number of contributors talks to
-how many people are maintaining the code base, and the number of forks shows
-the amount of activity other people have.  FIXME that sounds weird.  Why do forks
-matter.
+never does.  When doing product selection, of a product on GitHub, I look at
+three different numbers.
+
+1. GitHub Stars - Likes on Github
+1. GitHub Forks - Number of copies of the repo
+1. GitHub Contributors - Number of people with merged code
+
+Github Stars are akin to likes on a Social Media platfrom.  The number of
+contributors talks to the number of people maintaining the code base and
+documentation.  Active projects have a high number of contributors. Number of
+forks is a mix of likes a contributors. Contributors typically have to fork the
+repo. Other people will fork the projuect to build a custom copy, push code to a
+feature branch that they own, or for various other reasons. At the end of the
+day, the activity level of a project is super important. These are some of the
+metrics that I personally use to judge the activity level.
+
+### GitHub Stars
+
+![Project Stars](/img/cni-github-03.png){:class="img-responsive"}
+
+### GitHub Forks
+
+![Project Stars](/img/cni-github-02.png){:class="img-responsive"}
+
+### GitHub Contributors
 
 ![Project Stars](/img/cni-github-01.png){:class="img-responsive"}
-![Project Stars](/img/cni-github-02.png){:class="img-responsive"}
-![Project Stars](/img/cni-github-03.png){:class="img-responsive"}
+
 ## Support Matix
 
 <table class="custom-table">
