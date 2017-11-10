@@ -7,8 +7,8 @@ categories: kuberentes cni
 ---
 
 Container Network Interface(CNI), is a library, under the umbrella of the  Cloud
-Native Computing Foundation project. Kubernetes uses CNI as an interface between
-network providers and Kubernetes networking.
+Native Computinmake -f NG.mk test version-distg Foundation project. Kubernetes
+uses CNI as an interface between network providers and Kubernetes networking.
 
 > Which CNI provider should I use?
 
@@ -59,6 +59,8 @@ API server has started. Please refer to each projects specific documentation.
 
 ### Calico
 
+Mike Stowe provided a summary of both Calico and Canal.
+
 Calico provides simple, scalable networking using a pure L3 approach.  It
 enables native, unencapsulated networking in environments that support it,
 including AWS AZ's and other environments with L2 adjacency between nodes, or in
@@ -81,23 +83,21 @@ taking advantage of familiar technologies that they may already be using.
 
 ### flannel
 
-> Flannel is a simple and easy way to configure a layer3 network fabric designed
-for Kubernetes.
+Brandon Phillips' views on flannel.
 
-@BrandonPhillips provided his views on flannel.
-
-> no external database (uses kubernetes API), simple performant works anywhere
-VXLAN default, can be layered with Calico policy engine (Canal). Oh, and lots of
-users.
+Flannel is a simple and easy way to configure a layer3 network fabric designed
+for Kubernetes. No external database (uses kubernetes API), simple performant
+works anywhere VXLAN default, can be layered with Calico policy engine (Canal).
+Oh, and lots of users.
 
 Techtonics,  CoreOS's Commercial Kuberentes product, uses a combination of
 flannel and Felix from Calico, much like Canal.
 
 ### kopeio-vxlan
 
-@justinsb the founder of kope-vxlan provided this:
+Justin Santa Barbara the founder of kope-vxlan provided this:
 
-> Pioneered the model that everyone is now using, No baggage, with  Minimal CNI
+Pioneered the model that everyone is now using, No baggage, with  Minimal CNI
 dependencies.  Currently, there is lower adoption.
 
 ### kube-router
@@ -113,24 +113,25 @@ standard CNI plug-ins so does require any additional CNI plug-in. Kube-router is
 built on standard Linux networking toolset and technologies like ipset,
 iptables, ipvs, and lvs.
 
+Murali Reddy founder of kube-router.
+
 ### romana
 
-@chrismarino summarized romana
+Chris Marino summarized romana.
 
-> Romana uses standard layer 3 networking for pod networks.
-
-Romana supports Kubernetes Network Policy APIs and never uses an overlay, even
-when a cluster is split across network availability zones.  Romana is the only
-CNI provider that uses native VPC networking across availability zones for HA
-clusters, delivering a high-performance CNI solution. The current release uses
-its Etcd cluster, but the next version will optionally allow the Kubernetes Etcd
-cluster to be used as a datastore.
+Romana uses standard layer 3 networking for pod networks. Romana supports
+Kubernetes Network Policy APIs and never uses an overlay, even when a cluster is
+split across network availability zones.  Romana is the only CNI provider that
+uses native VPC networking across availability zones for HA clusters, delivering
+a high-performance CNI solution. The current release uses its Etcd cluster, but
+the next version will optionally allow the Kubernetes Etcd cluster to be used as
+a datastore.
 
 ### weave
 
-Paul Fremantle summary of weave
+Paul Fremantle's synopsis of weave.
 
-> Weave supports an overlay network that can span different cloud networking
+Weave supports an overlay network that can span different cloud networking
 configurations, simplifying running legacy workloads on Kubernetes. For example,
 Weave supports multicast, even when the underlying network doesn't. Weave can
 configure the underlying VPC networking and bypass the overlay when running on
@@ -158,20 +159,15 @@ to a feature branch that they own, or for various reasons. The activity level of
 a project is critical.  These are some of the metrics that I use to judge the
 activity level.
 
-
-### GitHub Stars
-
 ![Project Stars](/img/cni-github-03.png){:class="img-responsive"}
 
-### GitHub Forks
-
 ![Project Stars](/img/cni-github-02.png){:class="img-responsive"}
-
-### GitHub Contributors
 
 ![Project Stars](/img/cni-github-01.png){:class="img-responsive"}
 
 ## Support Matix
+
+Here is a table of different features of each of the CNI providers mentioned.
 
 <table class="custom-table">
   <thead>
@@ -267,3 +263,53 @@ activity level.
     </tr>
   </tbody>
 </table>
+
+### Table Details
+
+#### Network Model
+
+The Network Model with providers is either encapsulated networking such as VXLAN
+or unencapsulated layer 2 networking.  Encapsulating network traffic requires
+compute to process, so theoretically is slower.  In my opinion, most use cases
+will not be impacted by the overhead.  More about VXLAN on
+[wikipedia](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN).
+
+#### BGP
+
+Border Gateway Protocol, BGP, is another nice to have a feature with CNI, if you
+need it.  It is an exterior gateway protocol designed to exchange routing and
+reachability information on the Internet.  BGP can assist with pod to pod
+networking between clusters.
+
+#### Network Policies
+
+A kubernetes.io blog post about network policies in 1.8
+[here](http://blog.kubernetes.io/2017/10/enforcing-network-policies-in-kubernetes.html).
+
+> Kubernetes now offers functionality to enforce rules about which pods can
+communicate with each other using network policies. This feature is has become
+stable Kubernetes 1.7 and is ready to use with supported networking plugins. The
+Kubernetes 1.8 release has added better capabilities to this feature.
+
+#### Mesh Networking
+
+This feature allows for "pod to pod" networking between Kubernetes clusters.
+This technology is not Kubernetes federation, but it pure networking between
+pods.
+
+#### Encyption
+
+Encrypting the network control plane, so all TCP and UDP traffic is encrypted.
+
+#### Ingress / Egress Policies
+
+The network policies are both Kubernetes and Non-Kubernetes routing control. For
+instance, many providers will allow an administrator to block a pod
+communicating with an EC2 instance meta and data service on 169.254.169.254.
+
+## Summary
+
+Pick one.  Make a decision quickly, don't spend days deciding, and test with
+your cluster.  File bugs, and develop a relationship with your network provider.
+At this point in time, networking is not boring in Kubernetes.  It is getting
+more boring every day!  Monitor test and monitor more.
