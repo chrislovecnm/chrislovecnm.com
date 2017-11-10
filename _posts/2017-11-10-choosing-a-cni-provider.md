@@ -7,7 +7,7 @@ categories: kuberentes cni
 ---
 
 Container Network Interface(CNI), is a library, under the umbrella of the  Cloud
-Native Computinmake -f NG.mk test version-distg Foundation project. Kubernetes
+Native Computing Foundation project. Kubernetes
 uses CNI as an interface between network providers and Kubernetes networking.
 
 > Which CNI provider should I use?
@@ -23,7 +23,7 @@ blog article is to educate and provide data so that you can make a decision.
 
 ## Why use CNI
 
-Kubernetes default provider networking provider, kubenet, is a simple network
+Kubernetes default networking provider, kubenet, is a simple network
 plugin that works with various cloud providers.  kubenet is a very basic network
 provider, and basic is good but does not have very many features. Moreover,
 kubenet has many  limitations.  For instance, when running kubenet, in AWS
@@ -117,15 +117,15 @@ Murali Reddy founder of kube-router.
 
 ### romana
 
-Chris Marino summarized romana.
-
 Romana uses standard layer 3 networking for pod networks. Romana supports
-Kubernetes Network Policy APIs and never uses an overlay, even when a cluster is
-split across network availability zones.  Romana is the only CNI provider that
-uses native VPC networking across availability zones for HA clusters, delivering
-a high-performance CNI solution. The current release uses its Etcd cluster, but
-the next version will optionally allow the Kubernetes Etcd cluster to be used as
-a datastore.
+Kubernetes Network Policy APIs and does not require an overlay, even when a cluster is
+split across network availability zones.  Romana support various network toplogies including
+flat layer 2 and routed layer 3 networks. Routes between nodes are installed locally and
+when necessary, distributed to network devices using eiter BGP or OSPF. In AWS deployments, Romana 
+installs aggregated routes into the VPC route table to overcome the 50 node limit. This lets 
+Romana use native VPC networking across availability zones for HA clusters. 
+The current release uses its own etcd cluster, but the next version will optionally allow the 
+Kubernetes etcd cluster to be used as a datastore.
 
 ### weave
 
@@ -174,7 +174,7 @@ Here is a table of different features of each of the CNI providers mentioned.
     <tr>
       <th>Provider</th>
       <th>Network <br>Model</th>
-      <th>BGP</th>
+      <th>Route <br>Distribution</th>
       <th>Network <br>Policies</th>
       <th>Mesh</th>
       <th>External <br>Database</th>
@@ -186,7 +186,7 @@ Here is a table of different features of each of the CNI providers mentioned.
   <tbody>
     <tr>
       <td>Calico</td>
-      <td>layer3</td>
+      <td>Layer 3</td>
       <td>Yes</td>
       <td>Yes</td>
       <td>Yes</td>
@@ -197,8 +197,8 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>Canal</td>
-      <td>vxlan</td>
-      <td>No</td>
+      <td>Layer 2<br>vxlan</td>
+      <td>Not<br>Required</td>
       <td>Yes</td>
       <td>No</td>
       <td>Yes*</td>
@@ -208,8 +208,8 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>flannel</td>
-      <td>vxlan</td>
-      <td>No</td>
+      <td>Layer 2<br>vxlan</td>
+      <td>Not<br>Required</td>
       <td>No</td>
       <td>No</td>
       <td>No</td>
@@ -219,8 +219,8 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>kopeio-vxlan</td>
-      <td>vxlan*</td>
-      <td>No</td>
+      <td>Layer 2<br>vxlan*</td>
+      <td>Not<br>Required</td>
       <td>No</td>
       <td>No</td>
       <td>No</td>
@@ -230,8 +230,8 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>kube-router</td>
-      <td>layer3</td>
-      <td>Yes</td>
+      <td>Layer 3</td>
+      <td>BGP</td>
       <td>Yes</td>
       <td>No</td>
       <td>No</td>
@@ -241,10 +241,10 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>romana</td>
-      <td>layer3</td>
+      <td>Layer3</td>
+      <td>BGP<br>OSPF</td>
       <td>Yes</td>
       <td>Yes</td>
-      <td>No</td>
       <td>Yes</td>
       <td>No</td>
       <td>Yes</td>
@@ -252,8 +252,8 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>weave</td>
-      <td>vxlan*</td>
-      <td>No</td>
+      <td>Layer 2<br>vxlan*</td>
+      <td>Not<br>Required</td>
       <td>Yes</td>
       <td>Yes</td>
       <td>No</td>
@@ -274,10 +274,11 @@ compute to process, so theoretically is slower.  In my opinion, most use cases
 will not be impacted by the overhead.  More about VXLAN on
 [wikipedia](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN).
 
-#### BGP
+#### Route Distribution
 
-Border Gateway Protocol, BGP, is another nice to have a feature with CNI, if you
-need it.  It is an exterior gateway protocol designed to exchange routing and
+For layer 3 CNI providers, route distribution is necssary. Route distribution is typically via BGP. Route distribution is 
+a nice to have a feature with CNI, if you plan to build clusters split 
+across network segments.  It is an exterior gateway protocol designed to exchange routing and
 reachability information on the Internet.  BGP can assist with pod to pod
 networking between clusters.
 
