@@ -10,7 +10,7 @@ image: /img/cni-logo.png
 
 Container Network Interface (CNI), is a library definition and a set of tools,
 under the umbrella of the Cloud Native Computing Foundation project. For more
-information visit there Github
+information visit there GitHub
 [project](https://github.com/containernetworking/cni). Kubernetes uses CNI as an
 interface between network providers and Kubernetes networking.
 
@@ -135,12 +135,16 @@ Murali Reddy founder of kube-router.
 Chris Marino summarized romana.
 
 Romana uses standard layer 3 networking for pod networks. Romana supports
-Kubernetes Network Policy APIs and never uses an overlay, even when a cluster is
-split across network availability zones.  Romana is the only CNI provider that
-uses native VPC networking across availability zones for HA clusters, delivering
-a high-performance CNI solution. The current release uses its Etcd cluster, but
-the next version will optionally allow the Kubernetes Etcd cluster to be used as
-a datastore.
+Kubernetes Network Policy APIs and does not require an overlay, even when a
+cluster is split across network availability zones. Romana support various
+network toplogies including flat layer 2 and routed layer 3 networks. Routes
+between nodes are installed locally and when necessary, distributed to network
+devices using eiter BGP or OSPF. In AWS deployments, Romana installs aggregated
+routes into the VPC route table to overcome the 50 node limit. This lets Romana
+use native VPC networking across availability zones for HA clusters. The
+current release uses its own etcd cluster, but the next version will optionally
+allow the Kubernetes etcd cluster to be used as a datastore
+
 
 ### weave
 
@@ -161,24 +165,35 @@ kops does not track usage numbers of the different CNI providers, and I hope
 never does.  When making a product selection, of software hosted on GitHub, I
 look at three different numbers.
 
-1. GitHub Stars - Likes on Github
+1. GitHub Stars - Likes on GitHub
 1. GitHub Forks - Number of copies of the repo
 1. GitHub Contributors - Number of people with merged code
 
-Github Stars are akin to likes on a Social Media platform.  The number of
-contributors talks to the number of people maintaining the code base and
-documentation.  Active projects have a high number of contributors. The number
-of forks is a mix of likes and contributors. Contributors typically have to fork
-the repo. Other people will fork the project to build a custom copy, push code
-to a feature branch that they own, or for various reasons. The activity level of
-a project is critical.  These are some of the metrics that I use to judge the
-activity level.
+The activity level of a project is critical.  These are some of the metrics
+that I use to judge the activity level.
+
+### GitHub Stars
+
+GitHub Stars are akin to likes on a Social Media platform.
 
 ![Project Stars](/img/cni-github-03.png){:class="img-responsive"}
 
-![Project Stars](/img/cni-github-02.png){:class="img-responsive"}
+### GitHub Contributors
 
-![Project Stars](/img/cni-github-01.png){:class="img-responsive"}
+The number of contributors talks to the number of people maintaining the code
+base and documentation.  Active projects have a high number of contributors. 
+
+
+![Project Forks](/img/cni-github-02.png){:class="img-responsive"}
+
+### GitHub Forks
+
+The number of forks is a mix of likes and contributors. Contributors typically
+have to fork the repo. Other people will fork the project to build a custom
+copy, push code to a feature branch that they own, or for various reasons. 
+
+![Project Forks](/img/cni-github-01.png){:class="img-responsive"}
+
 
 ## Support Matix
 
@@ -189,7 +204,7 @@ Here is a table of different features of each of the CNI providers mentioned.
     <tr>
       <th>Provider</th>
       <th>Network<br>Model</th>
-      <th>BGP</th>
+      <th>Route <br>Distribution</th>
       <th>Network<br>Policies</th>
       <th>Mesh</th>
       <th>External<br>Datastore</th>
@@ -201,7 +216,7 @@ Here is a table of different features of each of the CNI providers mentioned.
   <tbody>
     <tr>
       <td>Calico</td>
-      <td>layer3</td>
+      <td>Layer 3</td>
       <td>Yes</td>
       <td>Yes</td>
       <td>Yes</td>
@@ -212,8 +227,8 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>Canal</td>
-      <td>vxlan</td>
-      <td>No</td>
+      <td>Layer 2<br>vxlan</td>
+      <td>Not<br>Required</td>
       <td>Yes</td>
       <td>No</td>
       <td>Etcd <sup><a href="#fn1" id="ref1" style="font-weight:200">1</a></sup></td>
@@ -233,9 +248,9 @@ Here is a table of different features of each of the CNI providers mentioned.
       <td>No</td>
     </tr>
     <tr>
-      <td>kopeio<br>networking</td>
-      <td>vxlan <sup><a href="#fn2" id="ref2" style="font-weight:200">2</a></sup></td>
-      <td>No</td>
+      <td>kopeio-networking</td>
+      <td>Layer 2<br>vxlan <sup><a href="#fn2" id="ref2" style="font-weight:200">2</a></sup></td>
+      <td>Not<br>Required</td>
       <td>No</td>
       <td>No</td>
       <td>None</td>
@@ -245,8 +260,8 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>kube-router</td>
-      <td>layer3</td>
-      <td>Yes</td>
+      <td>Layer 3</td>
+      <td>BGP</td>
       <td>Yes</td>
       <td>No</td>
       <td>No</td>
@@ -256,8 +271,8 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>romana</td>
-      <td>layer3</td>
-      <td>Yes</td>
+      <td>Layer 3</td>
+      <td>BGP<br>OSPF</td>
       <td>Yes</td>
       <td>No</td>
       <td>Etcd</td>
@@ -267,8 +282,8 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>weave</td>
-      <td>vxlan <sup><a href="#fn3" id="ref3" style="font-weight:200">3</a></sup></td>
-      <td>No</td>
+      <td>Layer 2<br>vxlan <sup><a href="#fn3" id="ref3" style="font-weight:200">3</a></sup></td>
+      <td>Not Required</td>
       <td>Yes</td>
       <td>Yes</td>
       <td>No</td>
@@ -299,12 +314,13 @@ compute to process, so theoretically is slower.  In my opinion, most use cases
 will not be impacted by the overhead.  More about VXLAN on
 [wikipedia](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN).
 
-#### BGP
+#### Route Distribution
 
-Border Gateway Protocol, BGP, is another nice to have a feature with CNI, if you
-need it.  It is an exterior gateway protocol designed to exchange routing and
-reachability information on the Internet.  BGP can assist with pod to pod
-networking between clusters.
+For layer 3 CNI providers, route distribution is necssary. Route distribution
+is typically via BGP. Route distribution is a nice to have a feature with CNI,
+if you plan to build clusters split across network segments. It is an exterior
+gateway protocol designed to exchange routing and reachability information on
+the Internet. BGP can assist with pod to pod networking between clusters.
 
 #### Network Policies
 
