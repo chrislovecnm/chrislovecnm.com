@@ -4,7 +4,7 @@ description: Choosing which CNI provider to deploy in Kubernetes
 header: Choosing a CNI Provider for Kubernetes
 date:   2017-11-11 19:22:52 MDT
 categories: kuberentes cni
-image: /img/cni-logo.png
+image: /img/cni-logo-card.png
 
 ---
 
