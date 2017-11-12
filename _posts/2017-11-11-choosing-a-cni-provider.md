@@ -1,5 +1,5 @@
 ---
-title: Choosing a CNI Provider
+title: Choosing a CNI Provider for Kubernetes
 description: Choosing which CNI provider to deploy in Kubernetes
 header: Choosing a CNI Provider for Kubernetes
 date:   2017-11-11 19:22:52 MDT
@@ -350,10 +350,17 @@ communicating with an EC2 instance meta and data service on 169.254.169.254.
 
 ## Summary
 
-Pick one. If you do not need the advanced features that a CNI provider delivers
-use kubenet. It is stable, and fast. If you do need run more than 50 nodes on
-AWS or need otheradvanced features  make a decision quickly, don't spend days
-deciding, and test with your cluster.  File bugs, and develop a relationship
-with your network provider.  At this point in time, networking is not boring in
-Kubernetes.  It is getting more boring every day!  Monitor test and monitor more.  
+If you do not need the advanced features that a CNI provider delivers
+use kubenet. It is stable, and fast. Otherwise pick one. If you do need run
+more than 50 nodes on AWS or need otheradvanced features  make a decision
+quickly, don't spend days deciding, and test with your cluster.  File bugs, and
+develop a relationship with your network provider.  At this point in time,
+networking is not boring in Kubernetes.  It is getting more boring every day!
+Monitor test and monitor more.
 
+## Thanks
+
+Appreciate all of the feedback that I received on the pull request for this
+[blog post](https://github.com/chrislovecnm/chrislovecnm.com/pull/1).  Also,
+all of the summaries that were provided by the different people that work on
+the different projects.  
