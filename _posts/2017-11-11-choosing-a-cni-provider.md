@@ -220,18 +220,18 @@ Here is a table of different features of each of the CNI providers mentioned.
       <td>Yes</td>
       <td>Yes</td>
       <td>Yes</td>
-      <td>Etcd <sup><a href="#fn1" id="ref1" style="font-weight:200">1</a></sup></td>
+      <td>Etcd <sup><a href="#fn1" id="ref1" style="font-weight:100">1</a></sup></td>
       <td>Yes</td>
       <td>Yes</td>
       <td>Yes</td>
     </tr>
     <tr>
       <td>Canal</td>
-      <td>Layer 2<br>vxlan</td>
-      <td>Not<br>Required</td>
+      <td>Layer 2 vxlan</td>
+      <td>N/A</td>
       <td>Yes</td>
       <td>No</td>
-      <td>Etcd <sup><a href="#fn1" id="ref1" style="font-weight:200">1</a></sup></td>
+      <td>Etcd <sup><a href="#fn1" id="ref1" style="font-weight:100">1</a></sup></td>
       <td>No</td>
       <td>Yes</td>
       <td>No</td>
@@ -249,12 +249,12 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>kopeio-networking</td>
-      <td>Layer 2<br>vxlan <sup><a href="#fn2" id="ref2" style="font-weight:200">2</a></sup></td>
-      <td>Not<br>Required</td>
+      <td>Layer 2 vxlan <sup><a href="#fn2" id="ref2" style="font-weight:100">2</a></sup></td>
+      <td>N/A</td>
       <td>No</td>
       <td>No</td>
       <td>None</td>
-      <td>Yes <sup><a href="#fn2" id="ref2" style="font-weight:200">2</a></sup></td>
+      <td>Yes <sup><a href="#fn3" id="ref3" style="font-weight:100">3</a></sup></td>
       <td>No</td>
       <td>No</td>
     </tr>
@@ -272,7 +272,7 @@ Here is a table of different features of each of the CNI providers mentioned.
     <tr>
       <td>romana</td>
       <td>Layer 3</td>
-      <td>BGP<br>OSPF</td>
+      <td>OSPF</td>
       <td>Yes</td>
       <td>No</td>
       <td>Etcd</td>
@@ -282,8 +282,8 @@ Here is a table of different features of each of the CNI providers mentioned.
     </tr>
     <tr>
       <td>weave</td>
-      <td>Layer 2<br>vxlan <sup><a href="#fn3" id="ref3" style="font-weight:200">3</a></sup></td>
-      <td>Not Required</td>
+      <td>Layer 2 vxlan <sup><a href="#fn4" id="ref4" style="font-weight:100">4</a></sup></td>
+      <td>N/A</td>
       <td>Yes</td>
       <td>Yes</td>
       <td>No</td>
@@ -294,14 +294,15 @@ Here is a table of different features of each of the CNI providers mentioned.
   </tbody>
 </table>
 
-<sup id="fn1">1. [Calico and Canal include a feature to connect directly to
-Kubernetes, and not use Etcd.]<a href="#ref1"></a></sup><br>
-<sup id="fn2">2. [kopeio CNI provider has three different networking modes:
-vlan, layer2, GRE, and IPSEC.]<a href="#ref2" title="Jump back to footnote 2 in
+<sup id="fn1">1. Calico and Canal include a feature to connect directly to
+Kubernetes, and not use Etcd.<a href="#ref1"></a></sup><br>
+<sup id="fn2">2. kopeio CNI provider has three different networking modes:
+vlan, layer2, GRE, and IPSEC.<a href="#ref2" title="Jump back to footnote 2 in
 the text."></a></sup><br>
-<sup id="fn3">3. [Weave can operate in AWS-VPC mode without vxlan]<a
-href="#ref3" ></a></sup>
-
+<sup id="fn3">3. kopie-network provides encryptions in IPSEC mode, not the default vxlan mode.<a
+href="#ref3" ></a></sup><br>
+<sup id="fn4">4. Weave can operate in AWS-VPC mode without vxlan, but is limited to 50 nodes in EC2.<a
+href="#ref4" ></a></sup>
 
 
 ### Table Details
