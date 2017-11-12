@@ -4,6 +4,8 @@ description: Choosing which CNI provider to deploy in Kubernetes
 header: Choosing a CNI Provider for Kubernetes
 date:   2017-10-28 10:46:52 MDT
 categories: kuberentes cni
+image: /img/cni-logo.png
+
 ---
 
 Container Network Interface (CNI), is a library definition and a set of tools,
@@ -11,6 +13,8 @@ under the umbrella of the Cloud Native Computing Foundation project. For more
 information visit there Github
 [project](https://github.com/containernetworking/cni). Kubernetes uses CNI as an
 interface between network providers and Kubernetes networking.
+
+![CNI Logo](/img/cni-logo.png){:class="img-responsive"}
 
 ## Why use CNI
 
