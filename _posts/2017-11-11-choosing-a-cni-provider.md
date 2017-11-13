@@ -1,11 +1,11 @@
 ---
-title: Choosing a CNI Provider for Kubernetes
-description: Choosing which CNI provider to deploy in Kubernetes
-header: Choosing a CNI Provider for Kubernetes
+title: Choosing a CNI Network Provider for Kubernetes
+description: Choosing which CNI Network provider to deploy in Kubernetes
+header: Choosing a CNI Network Provider for Kubernetes
 date:   2017-11-11 19:22:52 MDT
-categories: kuberentes cni
+categories: kubernetes cni
 image: /img/cni-logo-card.png
-
+  
 ---
 
 Container Network Interface (CNI), is a library definition and a set of tools,
@@ -57,7 +57,7 @@ sorted in alphabetical order.
 - [kopeio-vxlan](https://github.com/kopeio/networking)
 - [kube-router](https://github.com/cloudnativelabs/kube-router)
 - [romana](https://github.com/romana/romana)
-- [weave](https://github.com/weaveworks/weave-kube)
+- [Weave Net](https://github.com/weaveworks/weave-kube)
 
 Any of these CNI providers can be used without kops. All of the CNI providers
 use a daemonset installation model, where their product deploys a Kubernetes
@@ -146,11 +146,11 @@ current release uses its own etcd cluster, but the next version will optionally
 allow the Kubernetes etcd cluster to be used as a datastore
 
 
-### weave
+### Weave Net
 
-Paul Fremantle's synopsis of weave.
+Paul Fremantle's synopsis of Weave Net.
 
-Weave supports an overlay network that can span different cloud networking
+Weave Net supports an overlay network that can span different cloud networking
 configurations, simplifying running legacy workloads on Kubernetes. For example,
 Weave supports multicast, even when the underlying network doesn't. Weave can
 configure the underlying VPC networking and bypass the overlay when running on
@@ -160,7 +160,7 @@ doesn't need to rely on an Etcd. Weave supports encryption and Kubernetes
 network policy ensuring that there is security at the network level.
 
 ## By the Numbers
-
+ 
 kops does not track usage numbers of the different CNI providers, and I hope
 never does.  When making a product selection, of software hosted on GitHub, I
 look at three different numbers.
@@ -183,8 +183,7 @@ GitHub Stars are akin to likes on a Social Media platform.
 The number of contributors talks to the number of people maintaining the code
 base and documentation.  Active projects have a high number of contributors. 
 
-
-![Project Forks](/img/cni-github-02.png){:class="img-responsive"}
+![Project Contributors](/img/cni-github-01.png){:class="img-responsive"}
 
 ### GitHub Forks
 
@@ -192,7 +191,7 @@ The number of forks is a mix of likes and contributors. Contributors typically
 have to fork the repo. Other people will fork the project to build a custom
 copy, push code to a feature branch that they own, or for various reasons. 
 
-![Project Forks](/img/cni-github-01.png){:class="img-responsive"}
+![Project Forks](/img/cni-github-02.png){:class="img-responsive"}
 
 
 ## Support Matix
@@ -281,14 +280,15 @@ Here is a table of different features of each of the CNI providers mentioned.
       <td>Yes</td>
     </tr>
     <tr>
-      <td>weave</td>
-      <td>Layer 2 vxlan <sup><a href="#fn4" id="ref4" style="font-weight:100">4</a></sup></td>
+      <td>Weave Net</td>
+      <td>Layer 2 vxlan <sup><a href="#fn4" id="ref4" style="font-weight:100">4</a></sup>
+      </td>
       <td>N/A</td>
       <td>Yes</td>
       <td>Yes</td>
       <td>No</td>
       <td>Yes</td>
-      <td>Yes</td>
+      <td>Yes <sup><a href="#fn5" id="ref5" style="font-weight:100">5</a></sup></td>
       <td>Yes</td>
     </tr>
   </tbody>
@@ -301,8 +301,9 @@ vlan, layer2, GRE, and IPSEC.<a href="#ref2" title="Jump back to footnote 2 in
 the text."></a></sup><br>
 <sup id="fn3">3. kopie-network provides encryptions in IPSEC mode, not the default vxlan mode.<a
 href="#ref3" ></a></sup><br>
-<sup id="fn4">4. Weave can operate in AWS-VPC mode without vxlan, but is limited to 50 nodes in EC2.<a
-href="#ref4" ></a></sup>
+<sup id="fn4">4. Weave Net can operate in AWS-VPC mode without vxlan, but is limited to 50 nodes in EC2.<a
+href="#ref4" ></a></sup><br>
+<sup id="fn5">5. Weave Net does not have egress rules out of the box.<a href="#ref5" ></a></sup>
 
 
 ### Table Details
