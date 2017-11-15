@@ -194,7 +194,7 @@ copy, push code to a feature branch that they own, or for various reasons.
 ![Project Forks](/img/cni-github-02.png){:class="img-responsive"}
 
 
-## Support Matix
+## Support Matrix
 
 Here is a table of different features of each of the CNI providers mentioned.
 
