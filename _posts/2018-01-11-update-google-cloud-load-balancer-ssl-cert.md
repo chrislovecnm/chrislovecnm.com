@@ -11,7 +11,7 @@ tags:
 ---
 
 Well it is three months since I stated blogging again, and guess what?  Time to
-update the SSL Certificate.  Like many other sites cnmconsulting.net is using a
+update the SSL Certificate.  Like many other sites chrislovecnm.com is using a
 free SSL Certificate issued by [letsencypt](https://letsencrypt.org/).  You
 have to renew these certificates every three months.
 
