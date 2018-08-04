@@ -18,12 +18,12 @@ Linkedin URL: <a href="https://www.linkedin.com/in/{{ site.twitter_username }}">
 More than eighteen years of diverse experience creating custom solutions;
 Kubernetes Implementations, DevOps solutions, Big Data Implementations, and
 scalable microservices.  Proven ability to solve complex problems with limited
-resources, on time, and within budget. Retained critical clients in high
+resources, on-time, and within budget. Retained critical clients in high
 pressure and politically charged situations by identifying and creating unique
 solutions, thereby maintaining revenue. Industry-leading blend of cutting-edge
 Kubernetes Deployments, Big Data Technologies, and system integration.
-Kuberentes core contributor, kops owner, and lead for the AWS Kubernetes Special
-interest groups.
+Kubernetes core contributor, kops owner, and lead achitect for the Google
+Professional Services Helmsman project.
 
 ## Skills
 
@@ -34,7 +34,7 @@ interest groups.
   </tr>
   <tr>
     <th>Containers</th>
-    <td>Kuberentes, Docker, Bazel, Mesos</td>
+    <td>Kubernetes, Docker, Bazel, Mesos</td>
  </tr>
   <tr>
     <th>DevOps Tools</th>
@@ -67,7 +67,7 @@ interest groups.
 <span class="by-line">04/2016 – Present</span>
 
 Kubernetes contributor and active community member.  Focus is primarily in three
-areas; kops, the AWS special interest group, and mentoring.
+areas; GKE, kops, and mentoring.
 
 kops is the easiest way to get a production-grade Kubernetes cluster up and
 running in EC2 or GCE.  Added support for installing CNI providers, and cluster
@@ -77,14 +77,24 @@ re-using share security groups and IAM profiles.  Assisted other contributors
 with design and reviewed numerous Pull Requests. Implemented `kops` bi-weekly
 developer offices hours.
 
-Currently volunteering as one of the leaders in the AWS special interest group.
+Volunteered as one of the leaders in the AWS special interest group.
 Facilitating meetings, and involved in product decisions for AWS cloud support
-in the Kuberentes project.  Implemented critical fix [
-#39551](https://github.com/kubernetes/kubernetes/pull/39551) for Kubernetes
+in the Kubernetes project.  Implemented critical fix 
+[#39551](https://github.com/kubernetes/kubernetes/pull/39551) for Kubernetes
 1.4.9 that enabled changing times on volume attach/detach reconciling sync to
 fixing impact to AWS API calls.
 
+<!-- TODO need blurb about GKE Helmsman -->
+
 Assisting with the creation of an official Kubernetes Mentorship program.
+
+<!-- TODO need Google section 
+
+### Google / Reactive Ops
+<span class="by-line">03/2018  – Present</span>
+
+
+-->
 
 ### Vorstella
 <span class="by-line">06/2017  – 10/2017</span>
@@ -93,7 +103,7 @@ Assist in deploying Kubernetes into air-gapped enterprise environments with kops
 self-hosted assets.  Implemented capability to re-use security groups, iam
 profiles, in order to pass security review and PEM testing.  Utilized helm
 charts to deploy Cassandra and Datastax enterprise.  Designed and implemented
-Cassandra containers and stateful sets based on contributed Kuberentes Cassandra
+Cassandra containers and stateful sets based on contributed Kubernetes Cassandra
 examples. Implemented POC using weave to create a mesh pod network between two
 K8s clusters. Mentored developers in K8s design and custom application
 implementation.
@@ -101,7 +111,7 @@ implementation.
 ### Datapipe
 <span class="by-line">05/2016  – 05/2017</span>
 
-Lead architecture and deployment of Kuberentes deployment for trebuchet SAS
+Lead architecture and deployment of Kubernetes deployment for trebuchet SAS
 platform hosted in AWS. Architecture included CNI networking, installation tool
 selection. Designed kops private topology, deploying nodes in private VPC
 utilizing AWS Nat Gateways. Mentored staff on advanced Kubernetes DevOps,
@@ -182,7 +192,7 @@ Created a Grails audit tool to track discrepancies between AT&amp;T network
 provisioning and the usage of those provisions within VMware Virtual Cloud
 Director.  Grails application utilizes Twitter Bootstrap for look and feel, and
 jQuery as it’s JavaScript library.   Leveraged groovy to lazy load process XML
-that was created by a Spring Integration system that aggregates data from Oracle
+that was created by a Spring Integration system which aggregates data from Oracle
 databases into XML reports.
 
 Built integration bridge linking vCD and IP / Network provisioning tools.
@@ -206,7 +216,7 @@ staff in utilizing Spring based JUnit testing to save considerable time testing
 functionality outside of the Savvion container.
 
 Garden City Group – Assisted with the creation of a custom adapter for the
-integration of web services. Implemented various examples including a web
+integration of web services. Implemented various examples, including a web
 application that hosted CXF web services. This application provides examples of
 how to integrate an external web application with Savvion BusinessManager via
 the BizLogic Client API.  Using an external web application allows the creation
@@ -255,7 +265,7 @@ EXT JS libraries and JSON.  Worked with BizLogic and BizSolo process flows.
 
 
 Re-architected legacy daemon process into a web application utilizing Spring,
-JPA, RestEasy, CXF, Apache Camel and Apache ActiveMQ.  System integrated
+JPA, RestEasy, CXF, Apache Camel, and Apache ActiveMQ.  System-integrated
 multiple systems including databases, VMLogix, proprietary interfaces and source
 control.  Reduced overall lines of code by approximately 40%, while increasing
 unit test coverage by approximately 150%.  Increased system performance by 400%,
@@ -294,7 +304,7 @@ service interoperability, and general software delivery practices.
 Brought on to the Digital End-to-End (DETE) program to provide: architecture
 health checks, mentoring across various project components, and the delivery of
 service layer framework to access AquaLogic BPM.  DETE is Warner Bros. vision of
-the future studio environment wherein content is created, processed, managed and
+the future studio environment, wherein content is created, processed, managed and
 distributed digitally.  The project’s cornerstone technologies included
 AquaLogic BPM, WebCenter Interaction, AquaLogic Enterprise Service Bus, and HP
 Digital Media Platform.
@@ -348,4 +358,4 @@ with time spent in Desert Storm.
 ### University of Colorado
 <span class="by-line">Boulder Colorado</span>
 
-Electrical Computer Engineering -Attended three years of college, before being recruited by an employer for a software position.
+Electrical Computer Engineering - Attended three years of college, before being recruited by an employer for a software position.

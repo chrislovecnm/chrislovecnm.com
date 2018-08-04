@@ -7,17 +7,16 @@ categories: kubernetes best-practices
 ---
 
 
-This is the first in 3 that outlines Highly Available(HA) and application resilience best practices for running a custom or third party application hosted inside a Kubernetes (K8s) cluster.  High Availability and resilience allow us to handle; infrastructure and applications failures, cloud outages where the Kuberentes cluster is still functional, rolling updates of K8s, and rolling updates of applications.  One of the guiding principles of Kubernetes is HA fault tolerance, but Kubernetes provides a platform to build applications that meet HA SLAs, it does not make applications fault tolerant.
+This is the first in 3 that outlines Highly Available (HA) and application resilience best practices for running a custom, or third party application hosted inside a Kubernetes (K8s) cluster.  High Availability and resilience allow us to handle: infrastructure and applications failures, cloud outages where the Kubernetes cluster is still functional, rolling updates of K8s, and rolling updates of applications.  One of the guiding principles of Kubernetes is HA fault tolerance, but Kubernetes provides a platform to build applications that meet HA SLAs, it does not make applications fault tolerant.
 
-Whenever I think about architecture I follow a simple thought process.  What do I need
-to do to design and deploy and application, so that I am not woke up at 2am in the
-morning because of a page goes off.  And if I am woken up at 2am, how can I setup
+Whenever I think about architecture I follow a simple thought process: What do I need
+to do to design and deploy an application, so that I am not woken up at 2am because a page goes off?  And if I am woken up at 2am, how can I setup
 a system that will failover and recover itself by the time that I log into the Kubernetes
 cluster.
 
 ## TLDR;
 
-These are not nice to haves but must haves for designing and deploying an
+These are not nice-to-haves, but must haves for designing and deploying an
 application hosted in Kubernetes.
 
 - Make sure your application stops gracefully when it gets a `SIGTERM` signal. See [Gracefully handling container stop Signal Handling within Kubernetes](#gracefully-handling-container-stop-signal-handling-within-kubernetes).
@@ -25,22 +24,22 @@ application hosted in Kubernetes.
 - Use Pre or Post stop hooks if your binary needs more TLC to start or stop gracefully.
 
 ### Covered in Part Two
-- Use [Deployment]({% post_url 2017-10-07-highly-available-resilient-applications-2-of-3 %}#deployments) Controller Manifests for Microservice, and use [StatefulSets]({% post_url 2017-10-07-highly-available-resilient-applications-2-of-3 %}#StatefulSets) only if you need there features.
+- Use [Deployment]({% post_url 2017-10-07-highly-available-resilient-applications-2-of-3 %}#deployments) Controller Manifests for Microservice, and use [StatefulSets]({% post_url 2017-10-07-highly-available-resilient-applications-2-of-3 %}#StatefulSets) only if you need their features.
 - [Jobs]({% post_url 2017-10-07-highly-available-resilient-applications-2-of-3 %}#jobs) and [DaemonSets]({% post_url 2017-10-07-highly-available-resilient-applications-2-of-3 %}#daemonsets) do not provide out of the box HA, but fill some use cases.
 - [Persistent Volumes]({% post_url 2017-10-07-highly-available-resilient-applications-2-of-3 %}#persistent-volumes) are the way to save a make data persitent.
 
 ### Covered in Part Three
 - Use Liveness and Ready [Probes]({% post_url 2017-10-07-highly-available-resilient-applications-3-of-3 %}#probes). Design your application to use and support
 them.
-- Use [Affinity and Anti-Affinity Selectors]({% post_url 2017-10-07-highly-available-resilient-applications-3-of-3 %}#affinity-and-anti-affinity-selectors) if pods need
+- Use [Affinity and Anti-Affinity Selectors]({% post_url 2017-10-07-highly-available-resilient-applications-3-of-3 %}#affinity-and-anti-affinity-selectors) if Pods need
 to be ditributed across nodes.
 
 ## Application Lifecycle Within Kubernetes
 
 A container, which hosts an application, can be made aware of events in its
 lifecycle.  This information is essential for a hosted application to be alerted
-that it started or notified that it is stopping.  Within various scenarios,
-including a pod eviction from a Kubernetes node.  Another such scenic is when a
+that it started, or notified that it is stopping.  Within various scenarios,
+including a Pod eviction from a Kubernetes node.  Another such scenario is when a
 Kubernetes node is drained, before destroying that node.
 
 When an event occurs, kubelet calls into any registered container hook for that
@@ -59,7 +58,7 @@ found via the provided link.
 
 #### PostStart Hook
 
-This hook fires after a container creation, and often runs at the same time as a containers entry point.  Since this is an asynchronous call when the hook runs the timing is not guaranteed.
+This hook fires after a container creation, and often runs at the same time as a containers entry point.  Since this is an asynchronous call when the hook runs, the timing is not guaranteed.
 
 #### PreStop Hook
 
@@ -106,20 +105,20 @@ spec:
               command: ["/usr/sbin/nginx","-s","quit"]
 {% endhighlight %}
 
-### Gracefully handling container stop Signal Handling within Kubernetes
+### Gracefully Handling Container Stop Signal Handling within Kubernetes
 
 When Kuberentes shuts down a container, two different Unix Signals run: `SIGTERM` and `SIGKILL`. An example of the workflow to stop a pod and its container(s).
 
-1. The Kubernetes API receives a call command to delete a container or pod.
+1. The Kubernetes API receives a call command to delete a container or Pod.
 2. Default grace period of 30s starts unless otherwise configured.
 3. Pod status is set to "Terminating."
-4. Kubelet starts the pod shutdown process.
+4. Kubelet starts the Pod shutdown process.
 5. If a `preStop` hook exists it executes.
 7. The processes in the Pod's containers are sent the SIGTERM signal
 8. If the processes are still running after the default grace period, an SIGKILL signal given to the processes.
-9. Kubelet updates K8s API removing the pod when kubelet finished deleting the pod and its container(s).
+9. Kubelet updates K8s API removing the Pod when kubelet finished deleting the pod and its container(s).
 
-The application must receive the correct signals and handle those flags.  Moreover, properly designed, properly behaving, and appropriately deploy applications should not get to the point where an SIGKILL signal is not needed.
+The application must receive the correct signals and handle those flags.  Moreover, properly designed, properly behaving, and appropriately deploy applications should not get to the point where a SIGKILL signal is not needed.
 
 #### Complexity of Signal Handling in Containers
 
@@ -130,14 +129,14 @@ executable used from a Dockers ENTRYPOINT, that problem can cause complexities.
 
 _TLDR;_
 
-> Process ID 1, or PID 1, is a special process id that the kernel
+> Process ID 1, or PID 1, is a special process ID that the kernel
 reserves for init scripts.  Because init scripts are not used within containers,
 having an applications PID running as PID 1 can cause unexpected and
 obscure-looking issues.
 
-Moreover, various implementations of the UNIX shell, `/bin/sh`, do not pass
+oreover, various implementations of the UNIX shell, `/bin/sh`, do not pass
 signals to their child processes.  For instance, the default implementation of
-shell in the alpine base container does not send interupts to its child
+shell in the alpine base container does not send interrupts to its child
 processes.
 
 A simple solution is to use a binary that acts as a signal proxy and starts a
@@ -146,13 +145,13 @@ child process as PID 2 inside a container.
 ##### dumb-init
 
 Various binaries exist that assist with PID management and signal proxying
-within containers.  One such tool that used within Trebuchet is
-[dumb-init](https://github.com/Yelp/dumb-init).
+within containers.  One such tool that is used within Trebuchet is 
+[dumb-init] (https://github.com/Yelp/dumb-init).
 [Yelp](https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html)
-open sourced this a small C-based binary to solved the two problems listed
+open sourced this a small C-based binary to solve the two problems listed
 above, and more:
 
-1. `dumb-init` starts as PID 1 and then start a container application as PID 2.
+1. `dumb-init` starts as PID 1, and then start a container application as PID 2.
 2. `dumb-init` proxies any UNIX signals, such as SIGTERM, to its child process PID 2.
 3. `dumb-init` reaps any zombie process created.
 

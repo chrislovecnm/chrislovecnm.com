@@ -1,7 +1,7 @@
 ---
 title: Jekyll Building This Blog
 description: How I used Jekyll to build this blog
-header: Building this Blog with Jekyll
+header: Building This Blog with Jekyll
 date:   2017-10-14 14:52:14 MDT
 categories: jekyll building blog
 ---
@@ -11,7 +11,7 @@ to start blogging again. Jekyll was my obvious choice.  Wordpress would be my
 other option, but that requires a web server.  I would rather just have a static
 site for now.
 
-## Tools I am Using
+## Tools I Am Using
 
 1. [Jekyll](https://jekyllrb.com/) for blog generation
 1. Jekyll theme
@@ -48,8 +48,8 @@ Here is a link to my current
 
 ## Jekyll Theme
 
-[jekyllthemes.org](http://jekyllthemes.org/) has a ton of free themes. My wife
-did not like the colors for a solarized theme but did like
+[Jekyllthemes.org](http://jekyllthemes.org/) has a ton of free themes. My wife
+did not like the colors for a solarized theme, but did like
 [monochrome](https://github.com/dyutibarma/monochrome).  Clean, simple layout. I
 have some issues with CSS for code line numbers which I am not able to work out
 yet, and I made some tweaks for tables.
@@ -62,7 +62,7 @@ life for me.  Using source control with Jekyll is trivial.
 ## Travis for CI
 
 Travis, CircleCI, and Jenkins are probably the chief tools in the ecosystem.
-kops, and a lot of the other projects I am a part of run Travis.  Hence why I
+Kops, and a lot of the other projects I am a part of run Travis.  Hence why I
 chose Travis. I started with the instructions
 [here](http://jekyllrb.com/docs/continuous-integration/travis-ci/), but I
 modified my .travis.yml file.
@@ -119,5 +119,5 @@ online, and NADA.
 
 ## Next Steps
 
-[chrislovecnm.com](https://chrislovecnm.com) needed an internet home.  I will
+[Chrislovecnm.com](https://chrislovecnm.com) needed an internet home.  I will
 cover that in another post.

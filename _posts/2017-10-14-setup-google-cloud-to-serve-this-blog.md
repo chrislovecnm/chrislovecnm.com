@@ -18,13 +18,13 @@ Store simple.
 There are a lot of companies out there that offer object stores.  I am daily
 using AWS Cloud and GCE developing kops and Kubernetes.  I could have chosen
 something else, but I decided to stay with the major players.  Frankly, I could
-not decide.  My wife made the final call.  The conversation was: "Hon should we
+not decide.  My wife made the final call.  The conversation was: "Hon, should we
 use AWS or Google?".  Her answer was Google.
 
 ## Sign-up
 
-Here is the link [free trial](https://console.cloud.google.com/freetrial) for
-the free trial.  At the time I am writing this post, the free period is good for
+Here is the link for the [free trial](https://console.cloud.google.com/freetrial). 
+At the time I am writing this post, the free period is good for
 $300 over a year. From what I could figure out both I could not use AWS Free
 Tier since they charge for DNS.
 
@@ -35,12 +35,12 @@ S3 is a very well known Object Storage Amazon Cloud service. Google's option is
 
 Setting up a static site is trivial and
 [documented](https://cloud.google.com/storage/docs/hosting-static-website).  But
-that is fine if you are ok with two things.
+that is fine if you are ok with two things:
 
 1. Using HTTP
 1. Using subdomain like www.chrislovecnm.com
 
-My requirements
+My requirements:
 
 1. Use HTTPS, because Google gives better SEO with HTTPS
 1. www subdomain is so 2000's.  Just use chrislovecnm.com
@@ -54,7 +54,7 @@ on the fence if I am going to do that.  For now:
 gsutil -m rsync -a public-read -r _site/ gs://$YOURSITEBUCKET/
 {% endhighlight %}
 
-The Google storage UX does not have an option to make all files in a folder accessible publicly, but you can set the default permission to the public.  Run the following command.
+The Google storage UX does not have an option to make all files in a folder accessible publicly, but you can set the default permission to the public.  Run the following command:
 
 {% highlight bash %}
 gsutil defacl ch -u AllUsers:R gs://$YOURSITEBUCKET
@@ -88,7 +88,7 @@ Then I finally found this gem: [Google Cloud HTTPs load balancing with Letsencry
 
 - Install [certbot](https://github.com/certbot/certbot), and there is a brew package.
 - Run `sudo certbot certonly --manual -d yoursite.com,www.yoursite.com`
-- Follow the instructions and upload the web pages to your site
+- Follow the instructions and upload the web pages to your site.
 - Configure the load balancer with the cert.pem, fullchain.pem, and privkey.pem
 
 certbot CLI options and the name of the files it creates have changed since the
@@ -97,14 +97,14 @@ less than six hours.
 
 With the `gcloud` CLI you can follow these
 [instructions](https://cloud.google.com/compute/docs/load-balancing/http/ssl-certificates#createresource),
-but I used clicked on the buttons in the cloud console.  The general
+but I used clicked-on the buttons in the cloud console.  The general
 instructions for setting up the load balancer with HTTPS are
 [here](https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/#configure_load_balancer),
 but the UX wizards at Google have made it simple.
 
 ## DNS
 
-DNS is dead simple with Google Cloud, but not as many bells and whistles as such
+DNS is dead-simple with Google Cloud, but not as many bells and whistles as such
 services as AWS Cloud Route53 or CloudFlare.  But simple is good.  I switched my
 domain's NS servers with my registrar and set the static IP address assigned to
 my load balancer as a DNS "A" record.

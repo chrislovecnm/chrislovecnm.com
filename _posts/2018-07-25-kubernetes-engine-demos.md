@@ -21,7 +21,7 @@ I had one community managers for Kubernetes reach out and ask if I had been
 eaten by the all encompasing XYZ.  XYZ being her company.  Yes I have been
 working with a world class team with a major client on a fun, and now public,
 project.  Thanks to my partners over at ReactiveOps, I was given the opportunity
-to work with Google Professional Services Project Helmsman that I can only call
+to work with Google Professional Services on a project that I can only call
 amazingly awesome.
 
 The team that I work with has been working hard on getting various assets ready
@@ -29,7 +29,7 @@ for #GoogleNext2018, and some of those assets include Open Source examples using
 Kubernetes Engine.
 
 
-## Open Source with Google Cloud Platform - Project Helmsman
+## Open Source with Google Cloud Platform
 
 As many of you know, Google is a huge proponent and driver of many Open Source
 projects including Kubernetes. The projects that we released on 07/25/2018
@@ -217,7 +217,3 @@ mock on-prem connection.
 We are still busy working on few projects, but mostly looking forward to working
 with anyone who would like to help us fix any problems, and improve the
 communites OSS demos.  We love to see contributions and issues!
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NjQyNjAyM119
--->

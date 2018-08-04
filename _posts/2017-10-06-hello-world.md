@@ -7,7 +7,7 @@ categories: hello
 ---
 
 I am finally re-launching my blog.  Something that I have been meaning to do for
-way too long.  My passions include; my faith, marriage, Kuberentes, and teaching
+way too long.  My passions include; my faith, marriage, Kubernetes, and teaching
 Martial Arts.
 
 Enough about me, on to musings about Kubernetes and other interesting topics!
