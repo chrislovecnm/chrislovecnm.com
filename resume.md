@@ -66,35 +66,45 @@ Professional Services Helmsman project.
 ### Kubernetes Organization
 <span class="by-line">04/2016 – Present</span>
 
-Kubernetes contributor and active community member.  Focus is primarily in three
-areas; GKE, kops, and mentoring.
+Kubernetes contributor and active community member. Focus is primarily in three
+areas; Goggle Helmsman, kops, and mentoring.
+
+Principle Architect working with the Google Professional Services Helmsman
+Program. The project released on 07/25/2018 include 15 OSS demos covering
+various topics focusing on using Kuberenetes Engine on GCP, and connecting
+Kubernetes Engine on GCP to Kubernetes Engine On-Prem.
 
 kops is the easiest way to get a production-grade Kubernetes cluster up and
-running in EC2 or GCE.  Added support for installing CNI providers, and cluster
+running in EC2 or GCE. Added support for installing CNI providers, and cluster
 validation. Improved kop rolling-update to include support for draining and
 validating clusters. Worked on support for air gapping kops installations and
-re-using share security groups and IAM profiles.  Assisted other contributors
-with design and reviewed numerous Pull Requests. Implemented `kops` bi-weekly
+re-using share security groups and IAM profiles. Assisted other contributors
+with design and reviewed numerous Pull Requests. Implemented kops bi-weekly
 developer offices hours.
 
 Volunteered as one of the leaders in the AWS special interest group.
 Facilitating meetings, and involved in product decisions for AWS cloud support
-in the Kubernetes project.  Implemented critical fix 
+in the Kubernetes project. Implemented critical fix 
 [#39551](https://github.com/kubernetes/kubernetes/pull/39551) for Kubernetes
-1.4.9 that enabled changing times on volume attach/detach reconciling sync to
-fixing impact to AWS API calls.
+ 1.4.9 that enabled changing times on volume attach/detach reconciling sync to fixing
+impact to AWS API calls.  Assisting with the creation of an official Kubernetes
+Mentorship program.
 
-<!-- TODO need blurb about GKE Helmsman -->
-
-Assisting with the creation of an official Kubernetes Mentorship program.
-
-<!-- TODO need Google section 
 
 ### Google / Reactive Ops
 <span class="by-line">03/2018  – Present</span>
 
+Technical lead and principal architect working with Google Proserve on Helmsman
+program. Set technical guidance and oversaw technical quality for all assests
+delivered. Team included over 20 engineers.
 
--->
+Led the release of 15+ OSS projects on GitHub here. 
+In those demos and tutorials we covered a range of topics broken into
+various areas; Databases, Networking, Rolling Updates, Istio, Security, Logging
+Monitoring and Tracing.
+
+Each of the above tracks include accompanying presentations that are available
+to Google Partners.
 
 ### Vorstella
 <span class="by-line">06/2017  – 10/2017</span>
