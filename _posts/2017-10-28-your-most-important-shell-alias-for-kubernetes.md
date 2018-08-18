@@ -5,6 +5,7 @@ header: Your most important shell alias for Kubernetes
 date:   2017-10-28 07:48:45 MDT
 categories: Kubernetes
 image: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo_with_border.png
+tags: kubernetes
 
 ---
 

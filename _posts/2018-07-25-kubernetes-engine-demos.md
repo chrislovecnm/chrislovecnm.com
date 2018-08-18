@@ -5,9 +5,9 @@ header: Kubernetes Engine Demos
 date:   2018-07-25 06:54:49 PDT
 categories: Kubernetes
 tags:
-  - Kubernetes Engine
-  - Kubernetes
-  - Demos
+  - gke
+  - kubernetes
+  - demos
 ---
 
 ## Where's Waldo
@@ -112,10 +112,10 @@ types are deployed to demonstrate different Kubernetes Services.
 
 ### Connect GCP Networks with Cloud VPN
 
-Instead of using VPC Peering, this project duplicates the above project using 
+Instead of using VPC Peering, this project duplicates the above project using
 a VPN connection.  Clusters in one project will be used as stand-ins for
 "on-premise" clusters, and the VPN will demonstrate remote communication between
-those clusters, and Kubernetes Engine clusters. 
+those clusters, and Kubernetes Engine clusters.
 
 [Go to the demo project](https://github.com/GoogleCloudPlatform/gke-networking-demos/tree/master/gke-to-gke-vpn)
 

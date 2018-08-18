@@ -4,6 +4,7 @@ description: This my first post. Hello World!
 header: Hello World
 date:   2017-10-06 22:00:40 -0600
 categories: hello
+tags: hello
 ---
 
 I am finally re-launching my blog.  Something that I have been meaning to do for

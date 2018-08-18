@@ -3,6 +3,7 @@ title: Highly Available Resilient Applications in Kubernetes 3 of 3
 description: Highly Available(HA) and application resilience best practices for running a custom or third party application hosted inside a Kubernetes (K8s) cluster.
 header: Highly Available Resilient Applications in Kubernetes 3 of 3
 categories: kubernetes best-practices
+tags: kubernetes best-practices
 ---
 
 This is the post that outlines Highly Available (HA) and application resilience best practices for running a custom, or third party application hosted inside a Kubernetes (K8s) cluster.

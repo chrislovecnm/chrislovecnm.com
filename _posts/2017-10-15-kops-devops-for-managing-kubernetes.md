@@ -7,7 +7,7 @@ categories: kubernetes kops
 tags:
   - kubernetes
   - kops
-  - DevOps
+  - devops
 ---
 
 [kops](https://github.com/kubernetes/kops) is an Open Source top level

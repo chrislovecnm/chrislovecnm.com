@@ -4,6 +4,7 @@ description: How I used Jekyll to build this blog
 header: Building This Blog with Jekyll
 date:   2017-10-14 14:52:14 MDT
 categories: jekyll building blog
+tags: jekyll building blog
 ---
 
 [Jekyll](https://jekyllrb.com/) has crossed my path in the past, and I decided

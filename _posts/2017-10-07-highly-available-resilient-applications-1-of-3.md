@@ -4,6 +4,7 @@ description: Highly Available(HA) and application resilience best practices for 
 header: Highly Available Resilient Applications in Kubernetes 1 of 3
 date:   2017-10-06 22:00:40 -0600
 categories: kubernetes best-practices
+tags: kubernetes best-practices
 ---
 
 
@@ -145,7 +146,7 @@ child process as PID 2 inside a container.
 ##### dumb-init
 
 Various binaries exist that assist with PID management and signal proxying
-within containers.  One such tool that is used within Trebuchet is 
+within containers.  One such tool that is used within Trebuchet is
 [dumb-init] (https://github.com/Yelp/dumb-init).
 [Yelp](https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html)
 open sourced this a small C-based binary to solve the two problems listed

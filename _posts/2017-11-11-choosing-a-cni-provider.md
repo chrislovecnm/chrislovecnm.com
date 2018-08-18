@@ -4,8 +4,9 @@ description: Choosing which CNI Network provider to deploy in Kubernetes
 header: Choosing a CNI Network Provider for Kubernetes
 date:   2017-11-11 19:22:52 MDT
 categories: kubernetes cni
+tags: kubernetes cni
 image: /img/cni-logo-card.png
-  
+
 ---
 
 The Container Network Interface (CNI) is a library definition, and a set of tools
@@ -160,7 +161,7 @@ doesn't need to rely on an Etcd. Weave supports encryption and Kubernetes
 network policy, ensuring that there is security at the network level.
 
 ## By the Numbers
- 
+
 Kops does not track usage numbers of the different CNI providers, and I hope
 never does.  When making a product selection of software hosted on GitHub, I
 look at three different numbers:
@@ -181,7 +182,7 @@ GitHub Stars are akin to likes on a Social Media platform.
 ### GitHub Contributors
 
 The number of contributors talks to the number of people maintaining the code
-base and documentation.  Active projects have a high number of contributors. 
+base and documentation.  Active projects have a high number of contributors.
 
 ![Project Contributors](/img/cni-github-01.png){:class="img-responsive"}
 
@@ -189,7 +190,7 @@ base and documentation.  Active projects have a high number of contributors.
 
 The number of forks is a mix of likes and contributors. Contributors typically
 have to fork the repo. Other people will fork the project to build a custom
-copy, push code to a feature branch that they own, or for various reasons. 
+copy, push code to a feature branch that they own, or for various reasons.
 
 ![Project Forks](/img/cni-github-02.png){:class="img-responsive"}
 
@@ -365,4 +366,4 @@ Monitor test and monitor more.
 Appreciate all of the feedback that I received on the pull request for this
 [blog post](https://github.com/chrislovecnm/chrislovecnm.com/pull/1).  Also,
 all of the summaries that were provided by the different people that work on
-the different projects.  
+the different projects.
