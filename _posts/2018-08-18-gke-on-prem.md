@@ -4,13 +4,7 @@ description: GKE On-Prem
 header: GKE On-Prem
 date:   2018-08-18 12:37:50 MDT
 categories: gke on-prem
-tags:
-  - gke
-  - on-prem
-  - google
-  - next
-  - GoogleNext2018
-  - kubernetes
+tags: gke on-prem google next googlenext2018 kubernetes
 image: /img/k8s/logo-twitter.png
 
 ---

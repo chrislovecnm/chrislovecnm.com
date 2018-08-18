@@ -4,10 +4,7 @@ description: kops - Kubernetes Operation is DevOps for Kubernetes clusters.
 header: kops DevOps for Kubernetes
 date:   2017-10-15 18:50:06 MDT
 categories: kubernetes kops
-tags:
-  - kubernetes
-  - kops
-  - devops
+tags: kubernetes kops devops
 ---
 
 [kops](https://github.com/kubernetes/kops) is an Open Source top level

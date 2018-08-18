@@ -4,9 +4,7 @@ description: How I am hosting this blog in Google Cloud
 header: Setting Up Google Cloud To Serve This Blog
 date:   2017-10-14 16:52:54 MDT
 categories: blog
-tags:
-  - howto
-  - google cloud
+tags: howto google cloud
 ---
 
 [chrislovecnm.com](https://chrislovecnm.com) needed an internet home. Using
@@ -23,7 +21,7 @@ use AWS or Google?".  Her answer was Google.
 
 ## Sign-up
 
-Here is the link for the [free trial](https://console.cloud.google.com/freetrial). 
+Here is the link for the [free trial](https://console.cloud.google.com/freetrial).
 At the time I am writing this post, the free period is good for
 $300 over a year. From what I could figure out both I could not use AWS Free
 Tier since they charge for DNS.

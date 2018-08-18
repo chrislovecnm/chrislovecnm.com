@@ -4,10 +4,7 @@ description: Setting up Bazel with the Go Programming Language
 header: Bazel Golang Hello World
 date:   2017-10-22 12:27:01 MDT
 categories: golang bazel
-tags:
-  - bazel
-  - golang
-  - go
+tags: bazel golang go
 image: /img/bazel-icon.svg
 author:
   twitter: chrislovecnm
@@ -35,7 +32,7 @@ and Google officially Open Sourced the project.  Blaze is Google's closed source
 build tool and is the predecessor to Bazel.
 
 Bazel is a build tool that replaces using Makefiles or other tools for building
-go.  Under the hood, it uses `go build`; but it is not your average build tool. 
+go.  Under the hood, it uses `go build`; but it is not your average build tool.
 Just as `make` has many different options, Bazel provides many exciting features
 including dependency management, and templating with external tools, and the
 capability to build containers without docker.

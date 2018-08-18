@@ -4,10 +4,7 @@ description: Updating GCloud Load Balancer SSL Certificate
 header: Update Google Cloud Load Balancer SSL Cert
 date:   2018-01-11 22:21:12 MST
 categories: blog
-tags:
- - howto
- - google cloud
- - letsencrypt
+tags: howto google cloud letsencrypt gcp
 ---
 
 Well it is three months since I stated blogging again, and guess what?  Time to

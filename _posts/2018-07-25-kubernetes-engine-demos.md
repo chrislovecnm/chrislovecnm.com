@@ -4,10 +4,7 @@ description: What I have been doing for the last months, working with Kubernetes
 header: Kubernetes Engine Demos
 date:   2018-07-25 06:54:49 PDT
 categories: Kubernetes
-tags:
-  - gke
-  - kubernetes
-  - demos
+tags: gke kubernetes demos
 ---
 
 ## Where's Waldo
