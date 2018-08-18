@@ -8,6 +8,8 @@ categories:
   - on-prem
   - google
   - next
+image: /img/k8s/logo-twitter.png
+
 ---
 
 ## GoogleNEXT2018 Shocker
@@ -21,6 +23,8 @@ customer focused nature.
 The release of GKE On-Prem was a well-guarded secret inside the walls of Google.
 I was involved in a [program]({% post_url 2018-07-25-kubernetes-engine-demos %}) that supported
 running a hybrid cloud solution that fits that model of running GKE On-Prem within your datacenter.
+
+![K8s Logo](/img/k8s/logo-twitter.png){:class="img-responsive"}
 
 ## In Alpha
 
