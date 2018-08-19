@@ -28,7 +28,7 @@ running a hybrid cloud solution that fits that model of running GKE On-Prem with
 GKE On-Prem is current in a closed Alpha but is already running on client sites.
 To request early access sign-up [here](https://cloud.google.com/gke-on-prem/).
 
-### Distrobution
+### Distribution
 
 This distribution of Kuberentes is first available for installations on
 VMWare's VSphere platform.  Bare metal and OpenStack support were not talked about.
