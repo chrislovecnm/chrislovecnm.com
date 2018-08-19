@@ -30,14 +30,14 @@ To request early access sign-up [here](https://cloud.google.com/gke-on-prem/).
 
 ### Distribution
 
-This distribution of Kuberentes is first available for installations on
+This distribution of Kubernetes is first available for installations on
 VMWare's VSphere platform.  Bare metal and OpenStack support were not talked about.
 Little was talked about at a low technical level, but the Kubernetes control plane will run on the clients' site.
 
 ### Single Pane of Glass
 
-Another exciting feature for GKE On-Prem was the controller that allowed any Kubernetes instance to connect into GCP's Kuberentes console.  A demo took a Minikube installation of K8s and connected it to the GCP console.  From there you have all of the functionality to view and monitor any Kubernetes instance.
-The tech details were not fully shared, but if you have a Kuberentes cluster that has an accessible control plane API, then the GCP console can communicate with it.
+Another exciting feature for GKE On-Prem was the controller that allowed any Kubernetes instance to connect into GCP's Kubernetes console.  A demo took a Minikube installation of K8s and connected it to the GCP console.  From there you have all of the functionality to view and monitor any Kubernetes instance.
+The tech details were not fully shared, but if you have a Kubernetes cluster that has an accessible control plane API, then the GCP console can communicate with it.
 This capability is incredibly powerful.  Have a kops install on AWS, a GKE On-Prem install, and multiple GKE Clusters.  Login to the GCP console and one plane of glass to rule them all!
 
 The amusing thing is that they wanted to connect a GKE On-Prem install running on VSphere for the demo.  They could not get a public IP, so they just used MiniKube.  Frankly, I think the demo at #GoogleNext2018 was far more amazing connecting MiniKube.
