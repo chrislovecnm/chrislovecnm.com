@@ -46,4 +46,4 @@ The amusing thing is that they wanted to connect a GKE On-Prem install running o
 
 I cannot wait to use GKE On-Prem and put it through its paces.  Even the Googlers that I talked to were surprised at there clients results.  Their clients had tried different distributions in their data centers, and GKE On-Prem was not falling as others did.
 
-__Disclaimer:__ I work with Google Professional Services directly.  Google does not sponsor this blog post.
+__Disclaimer:__ I work with Google Professional Services.  Google does not sponsor this blog post.
