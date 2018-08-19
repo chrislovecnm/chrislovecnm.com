@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Chris Love
+title: About
 description: This is a little about me
 permalink: /about/
 ---
