@@ -11,7 +11,7 @@ image: /img/k8s/logo-twitter.png
 
 ## GoogleNEXT2018 Shocker
 
-The announcement of GKE On-Prem was a big surprise to me. At Google Next 2018 in San Fransico, Google announced the alpha program for GKE On-Prem.  This product is a game changer and puts Google in direct competition with products like OpenShift, Techtonic, and Conical's distro of Kubernetes.  Google's clients asked for an On-Prem solution where they could run the same distribution of GKE in their data center that Google runs for GKE. That simple point, "Our clients asked for it," speaks volumes to Google Clouds
+The announcement of GKE On-Prem was a big surprise to me. At Google Next 2018 in San Fransico, Google announced the alpha program for GKE On-Prem.  This product is a game changer and puts Google in direct competition with products like OpenShift, Techtonic, and Canonical's distro of Kubernetes.  Google's clients asked for an On-Prem solution where they could run the same distribution of GKE in their data center that Google runs for GKE. That simple point, "Our clients asked for it," speaks volumes to Google Clouds
 customer focused nature.
 
 The release of GKE On-Prem was a well-guarded secret inside the walls of Google.
