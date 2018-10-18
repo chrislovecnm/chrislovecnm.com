@@ -6,7 +6,6 @@ date:   2018-08-18 12:37:50 MDT
 categories: gke on-prem
 tags: gke on-prem google next googlenext2018 kubernetes
 image: /img/k8s/logo-twitter.png
-
 ---
 
 ## GoogleNEXT2018 Shocker
@@ -28,7 +27,7 @@ To request early access sign-up [here](https://cloud.google.com/gke-on-prem/).
 
 This distribution of Kubernetes is first available for installations on
 VMWare's VSphere platform.  Bare Metal and OpenStack support were not talked about.
-Not much was talked about at a low technical level, but the Kubernetes control plane will run on the clients' site.
+Not much was talked about at a low technical level.
 
 ### Single Pane of Glass
 
